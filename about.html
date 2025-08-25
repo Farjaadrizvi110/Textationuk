@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AccounTaxation: Guiding individuals out of financial struggle and businesses into financial strength. Expert accountancy and welfare support in Blackburn.">
+    <meta name="keywords" content="accountancy Blackburn, welfare support, tax returns, Universal Credit, PIP, ESA, business accounting, financial hardship, AccounTaxation">
+    <meta name="author" content="AccounTaxation Accountancy Services">
+    <title>AccounTaxation | Financial Clarity & Support in Blackburn</title>
+
+    <!-- Favicon (placeholder - replace with actual favicon.ico or .png) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            color: #1a202c; /* Dark text for contrast */
+        }
+
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .sparkle-text {
+            background: linear-gradient(to right, #ef4444, #ec4899, #f97316);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .sparkle-bg {
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+        }
+
+        .sparkle-border-button {
+            position: relative;
+            padding: 1px; /* Controls border thickness */
+            border-radius: 0.5rem; /* Match button's border-radius */
+            background: linear-gradient(to right, #ef4444, #ec4899, #f97316);
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .sparkle-border-button > button {
+            background-color: #ffffff; /* Or your desired button background */
+            color: #ef4444; /* Text color that contrasts with gradient */
+            transition: all 0.3s ease;
+        }
+        
+        .sparkle-border-button:hover > button {
+            background-color: transparent;
+            color: #ffffff;
+        }
+        
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .glassmorphism-darker {
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .curved-section-top::before {
+            content: '';
+            position: absolute;
+            top: -1px; /* Prevent thin line */
+            left: 0;
+            width: 100%;
+            height: 100px; /* Adjust height of the curve */
+            background-color: #f8fafc; /* Match the body background or previous section's bg */
+            clip-path: ellipse(70% 100% at 50% 100%); /* Curve shape */
+            z-index: 0;
+        }
+
+        .curved-section-bottom::after {
+            content: '';
+            position: absolute;
+            bottom: -1px; /* Prevent thin line */
+            left: 0;
+            width: 100%;
+            height: 100px; /* Adjust height of the curve */
+            background-color: #f8fafc; /* Match the body background or next section's bg */
+            clip-path: ellipse(70% 100% at 50% 0%); /* Curve shape */
+            z-index: 0;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ef4444; /* Red-500 */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dc2626; /* Red-600 */
+        }
+
+        /* Decorative elements */
+        .deco-sparkle-dot {
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(135deg, #ef4444, #ec4899);
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+        }
+        .header-shadow {
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+        .soft-shadow-card {
+            box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.1), 0 8px 10px -6px rgba(239, 68, 68, 0.1);
+        }
+        .soft-shadow-card-darker {
+             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-border {
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            -webkit-background-clip: padding-box;
+            position: relative;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -2px; /* same as border width */
+            border-radius: inherit; /* inherit container's border-radius */
+            background: linear-gradient(to right, #ef4444, #ec4899, #f97316);
+        }
+
+        /* For Services Page Popups */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .popup-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .popup-overlay.active .popup-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased leading-relaxed">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out header-shadow bg-white/80 backdrop-blur-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center group" aria-label="AccounTaxation Home">
+                        <svg class="h-10 w-10 text-red-600 group-hover:text-red-700 transition-colors duration-300 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                        </svg>
+                        <span class="font-poppins font-bold text-2xl text-slate-800 group-hover:text-red-600 transition-colors duration-300">AccounTaxation</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-2 items-center">
+                    <a href="index.html" class="font-poppins text-sm font-semibold text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300" aria-current="page">Home</a>
+                    <a href="about.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">About Us</a>
+                    <a href="services.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">Services</a>
+                    <a href="reviews.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">Reviews</a>
+                    <a href="contact.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">Contact</a>
+                    <div class="pl-2">
+                        <a href="contact.html#contact-form" class="font-poppins text-sm font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-6 py-3 rounded-lg shadow-md hover:shadow-lg">
+                            Get Support <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-700 hover:text-red-600 focus:outline-none focus:text-red-600 p-2" aria-label="Open mobile menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl rounded-b-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block font-poppins text-base font-semibold text-red-600 bg-red-50 px-3 py-2 rounded-md" aria-current="page">Home</a>
+                <a href="about.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">About Us</a>
+                <a href="services.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">Services</a>
+                <a href="reviews.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">Reviews</a>
+                <a href="contact.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">Contact Us</a>
+            </div>
+            <div class="px-4 py-4 border-t border-slate-200">
+                 <a href="contact.html#contact-form" class="w-full flex items-center justify-center font-poppins text-base font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-6 py-3 rounded-lg shadow-md hover:shadow-lg">
+                    Get Urgent Support <i class="fas fa-headset ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <main class="pt-20 bg-slate-50"> <!-- pt-20 to offset fixed header -->
+
+    <!-- About Us Hero Section -->
+    <section class="relative bg-gradient-to-br from-slate-700 via-slate-800 to-black pt-28 pb-16 md:pt-36 md:pb-24 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <!-- Subtle abstract background pattern -->
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="aboutHeroPattern" patternUnits="userSpaceOnUse" width="80" height="80" patternTransform="scale(1.2) rotate(15)"><rect x="0" y="0" width="100%" height="100%" fill="rgba(255,255,255,0)"/><path d="M0 0L40 40M40 0L0 40M20 0V40M0 20H40" stroke-width="0.2" stroke="rgba(239, 68, 68, 0.8)" fill="none"/></pattern></defs><rect width="100%" height="100%" fill="url(#aboutHeroPattern)"/></svg>
+        </div>
+        <div class="absolute top-1/4 left-10 w-32 h-32 bg-red-500/20 rounded-full filter blur-2xl animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-10 w-40 h-40 bg-pink-500/20 rounded-full filter blur-2xl animate-pulse animation-delay-2000"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-down" data-aos-duration="1000">
+            <div class="mb-4 md:mb-6">
+                <nav class="text-sm" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                        <li class="inline-flex items-center">
+                            <a href="index.html" class="inline-flex items-center text-xs font-medium text-slate-300 hover:text-red-400 transition-colors duration-300">
+                                <i class="fas fa-home mr-1.5 opacity-80"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <i class="fas fa-chevron-right fa-xs text-slate-600 mr-1.5"></i>
+                                <span class="ms-1 text-xs font-medium text-red-400 md:ms-2">About Us</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <h1 class="font-poppins text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-5 sm:mb-6 leading-tight">
+                Our Story: More Than <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-pink-400 to-orange-400">Just Numbers</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+                Discover the heart behind AccounTaxation – a Blackburn firm built on expertise, empathy, and a deep commitment to our community's financial wellbeing and prosperity.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#our-values" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-8 py-3.5 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                    Explore Our Values <i class="fas fa-heartbeat ml-2"></i>
+                </a>
+                <div class="sparkle-border-button">
+                    <button onclick="window.location.href='contact.html'" class="w-full sm:w-auto inline-flex items-center justify-center font-poppins text-base font-semibold px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 !text-white hover:!bg-red-600/20 !bg-transparent">
+                        Meet Our Team <i class="fas fa-users ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Founding Mission Section -->
+    <section class="py-16 md:py-24 bg-white relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="900">
+                    <span class="font-poppins text-sm font-semibold text-red-600 uppercase tracking-wider">The AccounTaxation Ethos</span>
+                    <h2 class="font-poppins text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-6 leading-tight">
+                        Founded on <span class="sparkle-text">Empathy</span>, Driven by <span class="sparkle-text">Expertise</span>
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        AccounTaxation was born from a desire to do more than just crunch numbers. We saw a need in Blackburn for financial services that truly understood people's lives – the struggles, the aspirations, the journey from hardship to stability, and from a fledgling idea to a thriving business.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Our mission is simple yet profound: <strong class="font-semibold text-slate-800">“We guide individuals out of financial struggle and businesses into financial strength.”</strong> This isn't just a tagline; it's the compass that directs every service we offer and every client interaction we have.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="sparkle-border-button">
+                            <button onclick="window.location.href='services.html'" class="w-full sm:w-auto inline-flex items-center justify-center font-poppins text-sm font-semibold px-7 py-3 rounded-lg shadow-sm transform hover:scale-105">
+                                Our Comprehensive Services <i class="fas fa-cogs ml-2"></i>
+                            </button>
+                        </div>
+                        <a href="contact.html#contact-form" class="inline-flex items-center justify-center font-poppins text-sm font-semibold text-white bg-slate-800 hover:bg-slate-900 transition-colors duration-300 px-7 py-3 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105">
+                            Speak to an Advisor <i class="fas fa-headset ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative mt-10 md:mt-0" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-red-100 rounded-full z-0 animate-blob"></div>
+                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-pink-100 rounded-lg z-0 animate-blob animation-delay-2000"></div>
+                    <div class="relative p-1.5 rounded-xl shadow-2xl bg-gradient-to-br from-red-500 to-pink-600 transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Empathetic financial advisor listening" class="rounded-lg shadow-xl w-full h-auto object-cover aspect-video">
+                        <div class="absolute -bottom-5 -right-5 p-3 bg-white/90 backdrop-blur-sm rounded-full shadow-xl z-20">
+                            <i class="fas fa-hand-holding-heart text-3xl text-red-600"></i>
+                        </div>
+                         <div class="absolute top-3 left-3 p-2 bg-white/70 backdrop-blur-sm rounded-md shadow-lg z-20 text-xs font-semibold text-slate-700">
+                            <i class="fas fa-check-circle text-green-500 mr-1"></i> Community Focused
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Decorative SVG Divider -->
+    <div class="relative h-20 md:h-28 overflow-hidden">
+        <div class="absolute inset-0 bg-slate-100"></div>
+        <svg class="absolute bottom-0 w-full h-full text-white" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0,100 C25,50 75,150 100,0 L100,100 Z"></path>
+        </svg>
+         <svg class="absolute top-0 w-full h-full text-slate-100 transform rotate-180" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0,100 C30,60 70,140 100,0 L100,100 Z"></path>
+        </svg>
+    </div>
+
+
+    <!-- Our Journey / Milestones Section -->
+    <section id="our-journey" class="py-16 md:py-24 bg-slate-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-poppins text-sm font-semibold text-red-600 uppercase tracking-wider">Our Growth Story</span>
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">
+                    Milestones on Our <span class="sparkle-text">Path to Service</span>
+                </h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    From humble beginnings to becoming a trusted name in Blackburn, our journey is marked by a continuous commitment to our clients and community.
+                </p>
+                <div class="mt-6 flex justify-center">
+                    <div class="w-20 h-1.5 bg-gradient-to-r from-red-500 to-pink-600 rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-red-200 transform -translate-x-1/2"></div>
+
+                <!-- Milestone 1 -->
+                <div class="mb-12 md:mb-16 flex md:items-center w-full">
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div class="hidden md:block relative md:w-10 md:h-10 rounded-full bg-red-500 shadow-md border-4 border-slate-100 flex items-center justify-center text-white z-10 transform -translate-x-1/2 md:translate-x-0">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="w-full md:w-1/2 md:pl-10" data-aos="fade-left" data-aos-offset="100">
+                        <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-red-100 transition-shadow duration-300 border-l-4 md:border-l-0 md:border-r-4 border-red-500 relative">
+                            <div class="absolute -top-2 -left-2 md:-top-2 md:-right-2 w-5 h-5 deco-sparkle-dot animate-ping"></div>
+                            <span class="text-xs font-poppins text-pink-600 font-semibold">Phase 1: The Vision</span>
+                            <h4 class="font-poppins text-xl font-semibold text-slate-800 mt-1 mb-2">The Spark of AccounTaxation</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Recognizing the gap for holistic financial support in Blackburn, AccounTaxation was conceptualized with a dual mission: expert accountancy paired with compassionate welfare guidance. The journey began with a small, dedicated team.
+                            </p>
+                            <div class="mt-3 text-xs text-slate-400 flex items-center">
+                                <i class="far fa-calendar-alt mr-1.5 text-red-500"></i> Conceptualization & Foundation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="mb-12 md:mb-16 flex md:items-center w-full">
+                    <div class="hidden md:block md:w-1/2 md:pr-10 text-right"></div>
+                     <div class="hidden md:block relative md:w-10 md:h-10 rounded-full bg-red-500 shadow-md border-4 border-slate-100 flex items-center justify-center text-white z-10 transform -translate-x-1/2 md:translate-x-0">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <div class="w-full md:w-1/2 md:pr-10 md:text-right" data-aos="fade-right" data-aos-offset="100">
+                        <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-pink-100 transition-shadow duration-300 border-l-4 border-pink-500 md:border-l-4 md:border-r-0 relative">
+                             <div class="absolute -top-2 -right-2 md:-top-2 md:-left-2 w-5 h-5 deco-sparkle-dot animate-ping animation-delay-500"></div>
+                            <span class="text-xs font-poppins text-red-600 font-semibold">Phase 2: Building Trust</span>
+                            <h4 class="font-poppins text-xl font-semibold text-slate-800 mt-1 mb-2">Establishing Community Roots</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Our early years focused on building relationships within the Blackburn community, offering accessible advice and proving our commitment to genuine support. Word-of-mouth referrals grew as we helped families and small businesses navigate complex financial landscapes.
+                            </p>
+                             <div class="mt-3 text-xs text-slate-400 flex items-center md:justify-end">
+                                <i class="far fa-calendar-alt mr-1.5 text-pink-500"></i> Early Growth & Engagement
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="mb-12 md:mb-16 flex md:items-center w-full">
+                    <div class="hidden md:block md:w-1/2"></div>
+                     <div class="hidden md:block relative md:w-10 md:h-10 rounded-full bg-red-500 shadow-md border-4 border-slate-100 flex items-center justify-center text-white z-10 transform -translate-x-1/2 md:translate-x-0">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="w-full md:w-1/2 md:pl-10" data-aos="fade-left" data-aos-offset="100">
+                        <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-orange-100 transition-shadow duration-300 border-l-4 md:border-l-0 md:border-r-4 border-orange-500 relative">
+                            <div class="absolute -bottom-2 -left-2 md:-bottom-2 md:-right-2 w-5 h-5 deco-sparkle-dot animate-ping animation-delay-1000"></div>
+                            <span class="text-xs font-poppins text-pink-600 font-semibold">Phase 3: Expanding Impact</span>
+                            <h4 class="font-poppins text-xl font-semibold text-slate-800 mt-1 mb-2">Broadening Our Service Spectrum</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                As demand grew, we expanded our team and service offerings, formalizing our specialist divisions for Welfare Support, Personal Taxation, and Business Accountancy. This allowed us to provide more comprehensive, tailored solutions.
+                            </p>
+                            <div class="mt-3 text-xs text-slate-400 flex items-center">
+                                <i class="far fa-calendar-alt mr-1.5 text-orange-500"></i> Service Diversification
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Milestone 4 (Future Goal) -->
+                 <div class="flex md:items-center w-full">
+                    <div class="hidden md:block md:w-1/2 md:pr-10 text-right"></div>
+                     <div class="hidden md:block relative md:w-10 md:h-10 rounded-full bg-red-500 shadow-md border-4 border-slate-100 flex items-center justify-center text-white z-10 transform -translate-x-1/2 md:translate-x-0">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="w-full md:w-1/2 md:pr-10 md:text-right" data-aos="fade-right" data-aos-offset="100">
+                        <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-red-100 transition-shadow duration-300 border-l-4 border-red-400 md:border-l-4 md:border-r-0 relative">
+                             <div class="absolute -bottom-2 -right-2 md:-bottom-2 md:-left-2 w-5 h-5 deco-sparkle-dot animate-ping animation-delay-1500"></div>
+                            <span class="text-xs font-poppins text-red-600 font-semibold">Our Ongoing Ambition</span>
+                            <h4 class="font-poppins text-xl font-semibold text-slate-800 mt-1 mb-2">Blackburn's #1 Trusted Partner</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Our journey continues with the unwavering goal to be Blackburn’s most trusted accountancy and financial help provider, known for professional accuracy and genuine human support, making a tangible difference.
+                            </p>
+                             <div class="mt-3 text-xs text-slate-400 flex items-center md:justify-end">
+                                <i class="far fa-calendar-check mr-1.5 text-red-400"></i> Future Vision & Commitment
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-center" data-aos="fade-up">
+                <a href="contact.html" class="inline-flex items-center justify-center font-poppins text-lg font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-10 py-4 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105">
+                    Become Part of Our Story <i class="fas fa-pen-nib ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Our Philosophy & Values Section -->
+    <section id="our-values" class="py-16 md:py-24 bg-gradient-to-br from-slate-800 via-slate-900 to-black text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="valuePattern" patternUnits="userSpaceOnUse" width="50" height="50" patternTransform="scale(2) rotate(30)"><rect x="0" y="0" width="100%" height="100%" fill="rgba(255,255,255,0)"/><circle cx="25" cy="25" r="1" stroke="rgba(239, 68, 68, 0.7)" fill="none" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#valuePattern)"/></svg>
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-poppins text-sm font-semibold text-red-500 uppercase tracking-wider">Our Guiding Principles</span>
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+                    The Pillars of <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-pink-400 to-orange-400">Our Practice</span>
+                </h2>
+                <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+                    These core values are woven into the fabric of AccounTaxation, guiding our actions and defining our commitment to you.
+                </p>
+                <div class="mt-6 flex justify-center">
+                    <div class="w-20 h-1.5 bg-gradient-to-r from-red-500 to-pink-500 rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Value Card 1: Dual Expertise -->
+                <div class="rounded-xl p-6 md:p-8 glassmorphism-darker border-t-4 border-red-500 shadow-2xl relative overflow-hidden hover:shadow-red-500/30 transition-shadow duration-300" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="absolute -top-5 -left-5 w-20 h-20 bg-red-500/10 rounded-full filter blur-md animate-blob"></div>
+                    <div class="relative z-10 flex flex-col items-center text-center h-full">
+                        <div class="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-red-500 to-pink-500 text-white text-3xl md:text-4xl mb-5 shadow-lg">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="font-poppins text-xl md:text-2xl font-bold text-white mb-3">Dual Expertise</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5 flex-grow">
+                            Accountancy + Welfare Advice = Full Life-Cycle Financial Support. We bridge the gap, offering a rare combination of skills to address all your financial needs comprehensively.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-slate-700 w-full">
+                             <a href="services.html" class="font-poppins text-xs font-semibold text-red-400 hover:text-white transition-colors duration-300 group">
+                                See How We Integrate <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value Card 2: Empathetic Approach -->
+                <div class="rounded-xl p-6 md:p-8 glassmorphism-darker border-t-4 border-pink-500 shadow-2xl relative overflow-hidden hover:shadow-pink-500/30 transition-shadow duration-300" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="absolute -bottom-5 -right-5 w-24 h-24 bg-pink-500/10 rounded-full filter blur-md animate-blob animation-delay-500"></div>
+                    <div class="relative z-10 flex flex-col items-center text-center h-full">
+                        <div class="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 text-white text-3xl md:text-4xl mb-5 shadow-lg">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="font-poppins text-xl md:text-2xl font-bold text-white mb-3">Empathetic, Community-First</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5 flex-grow">
+                            We deeply understand the financial challenges of real people and businesses in Blackburn — you're not just numbers to us. Your wellbeing is our priority.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-slate-700 w-full">
+                             <a href="contact.html" class="font-poppins text-xs font-semibold text-pink-400 hover:text-white transition-colors duration-300 group">
+                                Experience Our Support <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value Card 3: Local & Accessible -->
+                <div class="rounded-xl p-6 md:p-8 glassmorphism-darker border-t-4 border-orange-500 shadow-2xl relative overflow-hidden hover:shadow-orange-500/30 transition-shadow duration-300" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="absolute -top-5 -right-5 w-20 h-20 bg-orange-500/10 rounded-full filter blur-md animate-blob animation-delay-1000"></div>
+                    <div class="relative z-10 flex flex-col items-center text-center h-full">
+                        <div class="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 text-white text-3xl md:text-4xl mb-5 shadow-lg">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="font-poppins text-xl md:text-2xl font-bold text-white mb-3">Local & Accessible</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5 flex-grow">
+                            Our walk-in friendly office in Blackburn ensures clear communication and hands-on support. We are proud to be an integral part of your local community.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-slate-700 w-full">
+                            <a href="contact.html#office-location" class="font-poppins text-xs font-semibold text-orange-400 hover:text-white transition-colors duration-300 group">
+                                Visit Our Office <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Value Card 4: Transition Support -->
+                <div class="rounded-xl p-6 md:p-8 glassmorphism-darker border-t-4 border-red-400 shadow-2xl relative overflow-hidden hover:shadow-red-400/30 transition-shadow duration-300" data-aos="zoom-in-up" data-aos-delay="400">
+                     <div class="absolute -bottom-5 -left-5 w-24 h-24 bg-red-400/10 rounded-full filter blur-md animate-blob animation-delay-1500"></div>
+                    <div class="relative z-10 flex flex-col items-center text-center h-full">
+                        <div class="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-red-400 to-pink-400 text-white text-3xl md:text-4xl mb-5 shadow-lg">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3 class="font-poppins text-xl md:text-2xl font-bold text-white mb-3">Transition Support</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5 flex-grow">
+                            We specialize in helping clients move seamlessly from benefits to business, or navigate other significant financial transitions, guiding them every step of the way.
+                        </p>
+                         <div class="mt-auto pt-4 border-t border-slate-700 w-full">
+                            <a href="services.html#business-accountancy" class="font-poppins text-xs font-semibold text-red-300 hover:text-white transition-colors duration-300 group">
+                                Start Your Business Journey <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Value Card 5: Trusted By Community -->
+                <div class="rounded-xl p-6 md:p-8 glassmorphism-darker border-t-4 border-pink-400 shadow-2xl relative overflow-hidden hover:shadow-pink-400/30 transition-shadow duration-300" data-aos="zoom-in-up" data-aos-delay="500">
+                    <div class="absolute -top-5 -left-5 w-20 h-20 bg-pink-400/10 rounded-full filter blur-md animate-blob animation-delay-2000"></div>
+                    <div class="relative z-10 flex flex-col items-center text-center h-full">
+                        <div class="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-pink-400 to-purple-500 text-white text-3xl md:text-4xl mb-5 shadow-lg">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <h3 class="font-poppins text-xl md:text-2xl font-bold text-white mb-3">Trusted By The Community</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5 flex-grow">
+                            We are known locally for fairness, clarity, and providing real help that goes beyond reports and returns. Your trust is our most valued asset and achievement.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-slate-700 w-full">
+                            <a href="reviews.html" class="font-poppins text-xs font-semibold text-pink-300 hover:text-white transition-colors duration-300 group">
+                                Read Client Testimonials <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- Value Card 6: Commitment to Clarity -->
+                <div class="rounded-xl p-6 md:p-8 glassmorphism-darker border-t-4 border-teal-500 shadow-2xl relative overflow-hidden hover:shadow-teal-500/30 transition-shadow duration-300" data-aos="zoom-in-up" data-aos-delay="600">
+                    <div class="absolute -bottom-5 -right-5 w-24 h-24 bg-teal-500/10 rounded-full filter blur-md animate-blob animation-delay-2500"></div>
+                    <div class="relative z-10 flex flex-col items-center text-center h-full">
+                        <div class="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 text-white text-3xl md:text-4xl mb-5 shadow-lg">
+                            <i class="fas fa-comments-dollar"></i>
+                        </div>
+                        <h3 class="font-poppins text-xl md:text-2xl font-bold text-white mb-3">Commitment to Clarity</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5 flex-grow">
+                            We demystify complex financial jargon and processes, ensuring you understand every step. Clear, transparent communication is fundamental to our service.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-slate-700 w-full">
+                             <a href="contact.html" class="font-poppins text-xs font-semibold text-teal-300 hover:text-white transition-colors duration-300 group">
+                                Ask Us Anything <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team (Conceptual) Section -->
+    <section id="meet-the-team" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-poppins text-sm font-semibold text-red-600 uppercase tracking-wider">Our Dedicated Professionals</span>
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">
+                    The Faces Behind <span class="sparkle-text">Your Success</span>
+                </h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    Our team is a blend of experienced accountants, knowledgeable welfare advisors, and passionate support staff, all committed to your financial well-being.
+                </p>
+                 <div class="mt-6 flex justify-center">
+                    <div class="w-20 h-1.5 bg-gradient-to-r from-red-500 to-pink-600 rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                <!-- Team Member Card 1 (Placeholder) -->
+                <div class="bg-slate-50 rounded-xl p-6 shadow-lg hover:shadow-red-100 soft-shadow-card-darker transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative mb-6">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-red-100 via-pink-100 to-orange-100 flex items-center justify-center text-slate-500 overflow-hidden shadow-md border-4 border-white">
+                            <svg class="w-20 h-20 text-red-500 opacity-70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-tr from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white shadow-md border-2 border-white">
+                            <i class="fas fa-user-tie text-lg"></i>
+                        </div>
+                    </div>
+                    <h4 class="font-poppins text-xl font-bold text-slate-800 mb-1">Lead Accountant</h4>
+                    <p class="text-red-600 font-semibold text-sm mb-3">Tax & Business Advisory Specialist</p>
+                    <p class="text-slate-600 text-xs px-2 leading-relaxed mb-5 flex-grow">
+                        With years of experience in navigating complex tax laws and business structures, our lead accountant is dedicated to ensuring your financial compliance and optimizing your fiscal health with precision and foresight.
+                    </p>
+                    <div class="mt-auto">
+                        <a href="contact.html" class="font-poppins text-xs font-semibold text-red-600 hover:text-red-800 transition-colors duration-300 group">
+                            Consult Specialist <i class="fas fa-chevron-right ml-1 text-xxs transform group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member Card 2 (Placeholder) -->
+                <div class="bg-slate-50 rounded-xl p-6 shadow-lg hover:shadow-pink-100 soft-shadow-card-darker transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative mb-6">
+                         <div class="w-32 h-32 rounded-full bg-gradient-to-br from-pink-100 via-orange-100 to-red-100 flex items-center justify-center text-slate-500 overflow-hidden shadow-md border-4 border-white">
+                            <svg class="w-20 h-20 text-pink-500 opacity-70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                         <div class="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-tr from-pink-500 to-orange-500 rounded-full flex items-center justify-center text-white shadow-md border-2 border-white">
+                            <i class="fas fa-hands-helping text-lg"></i>
+                        </div>
+                    </div>
+                    <h4 class="font-poppins text-xl font-bold text-slate-800 mb-1">Senior Welfare Advisor</h4>
+                    <p class="text-pink-600 font-semibold text-sm mb-3">Benefits & Hardship Support Expert</p>
+                    <p class="text-slate-600 text-xs px-2 leading-relaxed mb-5 flex-grow">
+                        Passionate about social justice and armed with in-depth knowledge of the UK benefits system, our welfare advisor champions your rights and helps secure the support you're entitled to with empathy and determination.
+                    </p>
+                     <div class="mt-auto">
+                        <a href="contact.html" class="font-poppins text-xs font-semibold text-pink-600 hover:text-pink-800 transition-colors duration-300 group">
+                            Get Welfare Advice <i class="fas fa-chevron-right ml-1 text-xxs transform group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member Card 3 (Placeholder) -->
+                 <div class="bg-slate-50 rounded-xl p-6 shadow-lg hover:shadow-orange-100 soft-shadow-card-darker transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative mb-6">
+                         <div class="w-32 h-32 rounded-full bg-gradient-to-br from-orange-100 via-red-100 to-pink-100 flex items-center justify-center text-slate-500 overflow-hidden shadow-md border-4 border-white">
+                           <svg class="w-20 h-20 text-orange-500 opacity-70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                         <div class="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-tr from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white shadow-md border-2 border-white">
+                            <i class="fas fa-headset text-lg"></i>
+                        </div>
+                    </div>
+                    <h4 class="font-poppins text-xl font-bold text-slate-800 mb-1">Client Support Manager</h4>
+                    <p class="text-orange-600 font-semibold text-sm mb-3">Your First Point of Contact</p>
+                    <p class="text-slate-600 text-xs px-2 leading-relaxed mb-5 flex-grow">
+                        Ensuring your experience with AccounTaxation is smooth and positive, our client support manager is here to answer your queries, schedule appointments, and provide a friendly, welcoming voice.
+                    </p>
+                     <div class="mt-auto">
+                        <a href="contact.html" class="font-poppins text-xs font-semibold text-orange-600 hover:text-orange-800 transition-colors duration-300 group">
+                            Reach Out to Support <i class="fas fa-chevron-right ml-1 text-xxs transform group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-12 text-center bg-gradient-to-r from-red-50 via-pink-50 to-orange-50 p-8 rounded-xl shadow-lg border border-red-100" data-aos="zoom-in">
+                <h3 class="font-poppins text-2xl font-bold text-slate-800 mb-3">A Team United by Purpose</h3>
+                <p class="text-slate-700 mb-6 max-w-xl mx-auto">
+                    While these are representative roles, every member of AccounTaxation shares a common goal: to provide exceptional service and make a positive impact on your financial life. We work collaboratively to bring you the best of our collective expertise.
+                </p>
+                <a href="contact.html" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-8 py-3 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105">
+                    Connect With Our Experts <i class="fas fa-comments-dollar ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Commitment to Blackburn Section -->
+    <section class="py-16 md:py-24 bg-slate-100 relative curved-section-top curved-section-bottom">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative order-last lg:order-first" data-aos="zoom-in-right" data-aos-duration="900">
+                    <div class="absolute inset-0 bg-gradient-to-br from-red-400 to-pink-500 rounded-xl transform rotate-3 shadow-2xl"></div>
+                    <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hands connecting, symbolizing community support in Blackburn" class="relative z-10 rounded-lg shadow-xl w-full h-auto object-cover aspect-video">
+                    <div class="absolute -bottom-6 -left-6 z-20 p-4 bg-white/90 backdrop-blur-sm rounded-full shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-city text-4xl text-red-600"></i>
+                    </div>
+                     <div class="absolute -top-4 -right-4 z-20 p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-xl" data-aos="fade-down" data-aos-delay="300">
+                        <span class="font-poppins text-xs font-bold text-pink-600">Blackburn Proud</span>
+                    </div>
+                </div>
+                <div class="order-first lg:order-last" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
+                    <span class="font-poppins text-sm font-semibold text-red-600 uppercase tracking-wider">Rooted in Our Community</span>
+                    <h2 class="font-poppins text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-6 leading-tight">
+                        Deeply Invested in <span class="sparkle-text">Blackburn's Future</span>
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        AccounTaxation is more than just a business located in Blackburn; we are an active part of its fabric. We believe in the potential of our town and its people, and we're committed to contributing to its economic health and social wellbeing.
+                    </p>
+                    <ul class="space-y-4 mb-8 text-slate-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span><strong class="font-semibold">Local Support:</strong> Prioritizing services that uplift local individuals and SMEs.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span><strong class="font-semibold">Accessible Services:</strong> Ensuring our expertise is available to all members of the community.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span><strong class="font-semibold">Ethical Practices:</strong> Operating with transparency and integrity, fostering trust within Blackburn.</span>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span><strong class="font-semibold">Empowering Growth:</strong> Helping local businesses thrive, creating jobs and opportunities.</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="contact.html#office-location" class="inline-flex items-center justify-center font-poppins text-sm font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-7 py-3 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105">
+                            Visit Us in Blackburn <i class="fas fa-map-marked-alt ml-2"></i>
+                        </a>
+                         <div class="sparkle-border-button">
+                            <button onclick="window.location.href='reviews.html'" class="w-full sm:w-auto inline-flex items-center justify-center font-poppins text-sm font-semibold px-7 py-3 rounded-lg shadow-sm transform hover:scale-105">
+                                Community Testimonials <i class="fas fa-comments ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final Call to Action Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-slate-800 via-slate-900 to-black rounded-xl shadow-2xl p-10 md:p-16 text-center relative overflow-hidden" data-aos="zoom-in-up">
+                <div class="absolute -top-12 -left-12 w-48 h-48 border-4 border-red-500/30 rounded-full animate-spin-slow opacity-50"></div>
+                <div class="absolute -bottom-16 -right-10 w-60 h-60 bg-pink-500/10 rounded-lg transform rotate-45 filter blur-xl"></div>
+                <div class="relative z-10">
+                    <div class="mb-6">
+                         <svg class="w-16 h-16 mx-auto text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                        </svg>
+                    </div>
+                    <h2 class="font-poppins text-3xl md:text-4xl font-extrabold text-white mb-4">
+                        Ready to Experience the AccounTaxation Difference?
+                    </h2>
+                    <p class="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                        We've shared our story, our values, and our commitment. Now, let us be part of yours. Whether you're an individual seeking guidance or a business aiming for growth, we're here to provide the expert, empathetic support you deserve.
+                    </p>
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
+                        <a href="contact.html#contact-form" class="inline-flex items-center justify-center w-full md:w-auto font-poppins text-base font-semibold bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white transition-all duration-300 px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                            <i class="fas fa-calendar-check mr-3"></i> Book a Free Consultation
+                        </a>
+                        <a href="services.html" class="inline-flex items-center justify-center w-full md:w-auto font-poppins text-base font-semibold border-2 border-slate-600 text-slate-300 hover:bg-slate-700 hover:border-slate-700 hover:text-white transition-colors duration-300 px-8 py-4 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105">
+                            <i class="fas fa-briefcase mr-3"></i> Explore Our Services
+                        </a>
+                    </div>
+                     <div class="mt-8 text-sm text-slate-400">
+                        <p>Or call us directly: <a href="tel:01254405737" class="font-semibold text-red-400 hover:underline">01254 405737</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- CTA Section 2: Business Growth Consultation -->
+    <section id="cta-business-growth" class="py-16 md:py-20 bg-white relative overflow-hidden">
+        <div class="absolute -right-20 -top-20 w-72 h-72 opacity-10">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#F87171" d="M48.1,-61.1C62.3,-52.7,73.8,-39.5,78.2,-24.1C82.7,-8.7,79.9,8.8,72.7,23.7C65.5,38.6,53.8,50.9,40.4,59.4C27,67.9,13.5,72.6,-0.5,73.1C-14.5,73.6,-29.1,69.9,-42.3,62C-55.6,54.2,-67.7,42.2,-73.3,27.9C-78.9,13.6,-78.1,-3,-72.4,-17.7C-66.7,-32.3,-56.1,-45,-43.2,-54.2C-30.3,-63.3,-15.2,-68.9,0.8,-70.1C16.7,-71.3,33.9,-69.6,48.1,-61.1Z" transform="translate(100 100) scale(1.2)" />
+            </svg>
+        </div>
+         <div class="absolute -left-16 bottom-0 w-60 h-60 opacity-5">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FB923C" d="M39.4,-52.9C53.9,-46.2,70.5,-39.7,76.5,-28.6C82.5,-17.5,77.9,-1.8,70.7,11.3C63.6,24.4,53.9,34.9,42.9,45.1C31.9,55.3,19.6,65.3,5.1,69.1C-9.4,72.9,-26.1,70.5,-38.9,62.9C-51.8,55.3,-60.8,42.5,-67.7,28.3C-74.6,14.1,-79.4,-1.5,-75.5,-15.1C-71.7,-28.7,-59.2,-40.3,-46.1,-46.7C-33,-53,-19.3,-54.2,-6.2,-54.6C6.9,-55,24.9,-59.7,39.4,-52.9Z" transform="translate(100 100) scale(1.1)" />
+            </svg>
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+                <div class="bg-slate-50 p-8 rounded-xl shadow-2xl border border-slate-200 soft-shadow-card-darker" data-aos="zoom-in-right">
+                    <h3 class="font-poppins text-xl font-semibold text-slate-800 mb-5 text-center">Book Business Strategy Session</h3>
+                    <form action="#" method="POST" class="space-y-5">
+                        <div>
+                            <label for="biz-name" class="sr-only">Company Name</label>
+                            <input type="text" name="biz-name" id="biz-name" required class="block w-full px-4 py-3 border border-slate-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 placeholder-slate-400 transition text-sm" placeholder="Your Company Name">
+                        </div>
+                        <div>
+                            <label for="biz-email" class="sr-only">Business Email</label>
+                            <input type="email" name="biz-email" id="biz-email" required class="block w-full px-4 py-3 border border-slate-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 placeholder-slate-400 transition text-sm" placeholder="Your Business Email">
+                        </div>
+                        <div>
+                            <label for="biz-goal" class="sr-only">Primary Business Goal</label>
+                            <select id="biz-goal" name="biz-goal" class="block w-full px-4 py-3 border border-slate-300 bg-white rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-slate-500 text-sm transition">
+                                <option value="">Select Primary Goal...</option>
+                                <option value="growth">Increase Profitability</option>
+                                <option value="efficiency">Improve Efficiency</option>
+                                <option value="startup">Startup Guidance</option>
+                                <option value="compliance">Tax & Compliance</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full flex items-center justify-center font-poppins font-semibold text-white bg-slate-800 hover:bg-slate-900 transition-colors duration-300 px-6 py-3.5 rounded-md shadow-lg">
+                                Request Strategy Call <i class="fas fa-chart-line ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <!-- Interactive Element: Progress Bar -->
+                    <div class="mt-6" x-data="{ progress: 0 }" x-intersect:enter="progress = 75">
+                        <p class="text-xs text-slate-500 mb-1 text-center">Your Path to Growth: Consultation Scheduled (<span x-text="progress + '%'"></span>)</p>
+                        <div class="w-full bg-slate-200 rounded-full h-2.5">
+                            <div class="bg-gradient-to-r from-red-400 to-pink-500 h-2.5 rounded-full transition-all duration-1000 ease-out" :style="`width: ${progress}%`"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center lg:text-left lg:pl-10" data-aos="fade-left" data-aos-delay="100">
+                    <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase rounded-full bg-red-100 text-red-700 mb-3">Strategic Business Support</span>
+                    <h2 class="font-poppins text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">
+                        Elevate Your <span class="sparkle-text">Business Performance</span>
+                    </h2>
+                    <p class="text-slate-600 mb-8 text-lg leading-relaxed">
+                        Partner with AccounTaxation for expert business accountancy, tax planning, and strategic advisory. We help SMEs and startups in Blackburn build a strong financial foundation for sustainable growth.
+                    </p>
+                    <div class="sparkle-border-button inline-block">
+                        <button onclick="document.getElementById('biz-name').focus()" class="font-poppins text-lg font-semibold px-10 py-4 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105">
+                            Schedule Free Consultation <i class="fas fa-briefcase ml-3"></i>
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-3 italic">Let's build your success story together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AlpineJS for progress bar interactivity (included via Tailwind's CDN if plugins are enabled, or add separately) -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <div class="py-8 bg-slate-100"><!-- Spacer div for extra lines and visual separation before footer -->
+        <div class="container mx-auto px-4">
+            <div class="h-1 bg-gradient-to-r from-red-200 via-pink-200 to-orange-200 rounded-full w-1/3 mx-auto"></div>
+        </div>
+    </div>
+    <div class="py-4 bg-slate-50"><!-- Spacer div --></div>
+    <div class="py-4 bg-white"><!-- Spacer div --></div>
+    <div class="py-4 bg-slate-50"><!-- Spacer div --></div>
+    <div class="py-2 bg-white"><!-- Spacer div --></div>
+    <div class="py-2 bg-slate-100"><!-- Spacer div --></div>
+    <div class="py-1 bg-white"><!-- Spacer div --></div>
+    <div class="py-1 bg-slate-50"><!-- Spacer div --></div>
+
+</main>
+
+
+      <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-pink-500 to-orange-500"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- About AccounTaxation -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="flex items-center group">
+                        <svg class="h-8 w-8 text-red-500 group-hover:text-red-400 transition-colors duration-300 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                        </svg>
+                        <span class="font-poppins font-bold text-xl text-white group-hover:text-red-400 transition-colors duration-300">AccounTaxation</span>
+                    </a>
+                    <p class="text-sm leading-relaxed">
+                        Guiding individuals out of financial struggle and businesses into financial strength. Your trusted local partner in Blackburn.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="#" aria-label="Facebook" class="text-slate-400 hover:text-red-500 transition-colors duration-300"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" aria-label="Twitter" class="text-slate-400 hover:text-red-500 transition-colors duration-300"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="text-slate-400 hover:text-red-500 transition-colors duration-300"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="font-poppins text-lg font-semibold text-white mb-5">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Home</a></li>
+                        <li><a href="about.html" class="hover:text-red-400 transition-colors duration-300 text-sm">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Our Services</a></li>
+                        <li><a href="reviews.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Client Reviews</a></li>
+                        <li><a href="contact.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Contact & Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="font-poppins text-lg font-semibold text-white mb-5">Core Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html#welfare" class="hover:text-red-400 transition-colors duration-300 text-sm">Welfare & Hardship Support</a></li>
+                        <li><a href="services.html#personal-accountancy" class="hover:text-red-400 transition-colors duration-300 text-sm">Personal Accountancy</a></li>
+                        <li><a href="services.html#business-accountancy" class="hover:text-red-400 transition-colors duration-300 text-sm">Business Advisory</a></li>
+                        <li><a href="contact.html#contact-form" class="hover:text-red-400 transition-colors duration-300 text-sm">Tax Return Filing</a></li>
+                        <li><a href="contact.html#contact-form" class="hover:text-red-400 transition-colors duration-300 text-sm">Benefit Claims Assistance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="font-poppins text-lg font-semibold text-white mb-5">Get In Touch</h4>
+                    <address class="not-italic space-y-3 text-sm">
+                        <p class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-red-500 flex-shrink-0"></i>
+                            <span>14 B JOHNSTON STREET<br>BLACKBURN, BB2 1ES</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-red-500"></i>
+                            <a href="tel:01254405737" class="hover:text-red-400 transition-colors duration-300">01254 405737</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-mobile-alt mr-3 text-red-500"></i>
+                            <a href="tel:07813133215" class="hover:text-red-400 transition-colors duration-300">07813 133215</a>
+                        </p>
+                         <p class="flex items-center">
+                            <i class="fas fa-mobile-alt mr-3 text-red-500"></i>
+                            <a href="tel:07867966636" class="hover:text-red-400 transition-colors duration-300">07867 966636</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-red-500"></i>
+                            <a href="mailto:info@accountaxation.co.uk" class="hover:text-red-400 transition-colors duration-300">info@accountaxation.co.uk</a> (Placeholder)
+                        </p>
+                    </address>
+                    <div class="mt-6">
+                        <a href="contact.html" class="inline-flex items-center font-poppins text-sm font-semibold text-white bg-red-600 hover:bg-red-700 transition-colors duration-300 px-6 py-2.5 rounded-md shadow hover:shadow-lg">
+                            Send Us A Message <i class="fas fa-paper-plane ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-700 pt-8 mt-8 text-center text-sm">
+                <p>© <span id="currentYear"></span> AccounTaxation Accountancy Services. All Rights Reserved.</p>
+                <p class="mt-1">Designed with <i class="fas fa-heart text-red-500"></i> for the Blackburn Community.</p>
+                 <p class="mt-2 text-xs text-slate-500">
+                    This website is for informational purposes only and does not constitute financial advice.
+                </p>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-12 h-12 md:w-20 md:h-20 opacity-10">
+             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#EF4444" d="M48.1,-61.1C62.3,-52.7,73.8,-39.5,78.2,-24.1C82.7,-8.7,79.9,8.8,72.7,23.7C65.5,38.6,53.8,50.9,40.4,59.4C27,67.9,13.5,72.6,-0.5,73.1C-14.5,73.6,-29.1,69.9,-42.3,62C-55.6,54.2,-67.7,42.2,-73.3,27.9C-78.9,13.6,-78.1,-3,-72.4,-17.7C-66.7,-32.3,-56.1,-45,-43.2,-54.2C-30.3,-63.3,-15.2,-68.9,0.8,-70.1C16.7,-71.3,33. equilíbrio,-69.6,48.1,-61.1Z" transform="translate(100 100) scale(0.8)" /></svg>
+        </div>
+         <div class="absolute top-10 right-0 w-12 h-12 md:w-20 md:h-20 opacity-10">
+             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#EC4899" d="M48.1,-61.1C62.3,-52.7,73.8,-39.5,78.2,-24.1C82.7,-8.7,79.9,8.8,72.7,23.7C65.5,38.6,53.8,50.9,40.4,59.4C27,67.9,13.5,72.6,-0.5,73.1C-14.5,73.6,-29.1,69.9,-42.3,62C-55.6,54.2,-67.7,42.2,-73.3,27.9C-78.9,13.6,-78.1,-3,-72.4,-17.7C-66.7,-32.3,-56.1,-45,-43.2,-54.2C-30.3,-63.3,-15.2,-68.9,0.8,-70.1C16.7,-71.3,33. equilíbrio,-69.6,48.1,-61.1Z" transform="translate(100 100) rotate(45) scale(0.7)" /></svg>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button (Optional, but good UX) -->
+    <button id="backToTopBtn" title="Go to top" class="fixed bottom-6 right-6 w-12 h-12 sparkle-bg text-white rounded-full shadow-lg hover:opacity-80 transition-opacity duration-300 z-50 hidden items-center justify-center text-xl">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // values from 0 to 3000, with step 50ms
+            once: true, // whether animation should happen only once - while scrolling down
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Open mobile menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                mobileMenuButton.setAttribute('aria-label', 'Close mobile menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        // Dynamic year for footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Sticky Header background change on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white/95', 'shadow-lg');
+                header.classList.remove('bg-white/80');
+            } else {
+                header.classList.remove('bg-white/95', 'shadow-lg');
+                header.classList.add('bg-white/80');
+
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.classList.remove('hidden');
+                backToTopBtn.classList.add('flex');
+            } else {
+                backToTopBtn.classList.add('hidden');
+                backToTopBtn.classList.remove('flex');
+            }
+        };
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+    </script>
+</body>
+</html>

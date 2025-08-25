@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AccounTaxation: Guiding individuals out of financial struggle and businesses into financial strength. Expert accountancy and welfare support in Blackburn.">
+    <meta name="keywords" content="accountancy Blackburn, welfare support, tax returns, Universal Credit, PIP, ESA, business accounting, financial hardship, AccounTaxation">
+    <meta name="author" content="AccounTaxation Accountancy Services">
+    <title>AccounTaxation | Financial Clarity & Support in Blackburn</title>
+
+    <!-- Favicon (placeholder - replace with actual favicon.ico or .png) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            color: #1a202c; /* Dark text for contrast */
+        }
+
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .sparkle-text {
+            background: linear-gradient(to right, #ef4444, #ec4899, #f97316);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .sparkle-bg {
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+        }
+
+        .sparkle-border-button {
+            position: relative;
+            padding: 1px; /* Controls border thickness */
+            border-radius: 0.5rem; /* Match button's border-radius */
+            background: linear-gradient(to right, #ef4444, #ec4899, #f97316);
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .sparkle-border-button > button {
+            background-color: #ffffff; /* Or your desired button background */
+            color: #ef4444; /* Text color that contrasts with gradient */
+            transition: all 0.3s ease;
+        }
+        
+        .sparkle-border-button:hover > button {
+            background-color: transparent;
+            color: #ffffff;
+        }
+        
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .glassmorphism-darker {
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .curved-section-top::before {
+            content: '';
+            position: absolute;
+            top: -1px; /* Prevent thin line */
+            left: 0;
+            width: 100%;
+            height: 100px; /* Adjust height of the curve */
+            background-color: #f8fafc; /* Match the body background or previous section's bg */
+            clip-path: ellipse(70% 100% at 50% 100%); /* Curve shape */
+            z-index: 0;
+        }
+
+        .curved-section-bottom::after {
+            content: '';
+            position: absolute;
+            bottom: -1px; /* Prevent thin line */
+            left: 0;
+            width: 100%;
+            height: 100px; /* Adjust height of the curve */
+            background-color: #f8fafc; /* Match the body background or next section's bg */
+            clip-path: ellipse(70% 100% at 50% 0%); /* Curve shape */
+            z-index: 0;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ef4444; /* Red-500 */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dc2626; /* Red-600 */
+        }
+
+        /* Decorative elements */
+        .deco-sparkle-dot {
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(135deg, #ef4444, #ec4899);
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+        }
+        .header-shadow {
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+        .soft-shadow-card {
+            box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.1), 0 8px 10px -6px rgba(239, 68, 68, 0.1);
+        }
+        .soft-shadow-card-darker {
+             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-border {
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            -webkit-background-clip: padding-box;
+            position: relative;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -2px; /* same as border width */
+            border-radius: inherit; /* inherit container's border-radius */
+            background: linear-gradient(to right, #ef4444, #ec4899, #f97316);
+        }
+
+        /* For Services Page Popups */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .popup-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .popup-overlay.active .popup-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased leading-relaxed">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out header-shadow bg-white/80 backdrop-blur-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center group" aria-label="AccounTaxation Home">
+                        <svg class="h-10 w-10 text-red-600 group-hover:text-red-700 transition-colors duration-300 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                        </svg>
+                        <span class="font-poppins font-bold text-2xl text-slate-800 group-hover:text-red-600 transition-colors duration-300">AccounTaxation</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-2 items-center">
+                    <a href="index.html" class="font-poppins text-sm font-semibold text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300" aria-current="page">Home</a>
+                    <a href="about.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">About Us</a>
+                    <a href="services.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">Services</a>
+                    <a href="reviews.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">Reviews</a>
+                    <a href="contact.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">Contact</a>
+                    <div class="pl-2">
+                        <a href="contact.html#contact-form" class="font-poppins text-sm font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-6 py-3 rounded-lg shadow-md hover:shadow-lg">
+                            Get Support <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-700 hover:text-red-600 focus:outline-none focus:text-red-600 p-2" aria-label="Open mobile menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl rounded-b-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block font-poppins text-base font-semibold text-red-600 bg-red-50 px-3 py-2 rounded-md" aria-current="page">Home</a>
+                <a href="about.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">About Us</a>
+                <a href="services.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">Services</a>
+                <a href="reviews.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">Reviews</a>
+                <a href="contact.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">Contact Us</a>
+            </div>
+            <div class="px-4 py-4 border-t border-slate-200">
+                 <a href="contact.html#contact-form" class="w-full flex items-center justify-center font-poppins text-base font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-6 py-3 rounded-lg shadow-md hover:shadow-lg">
+                    Get Urgent Support <i class="fas fa-headset ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 bg-slate-50"> <!-- pt-20 to offset fixed header -->
+
+    <!-- Contact Hero Section -->
+    <section class="relative bg-gradient-to-br from-red-500 via-pink-600 to-orange-500 pt-28 pb-16 md:pt-36 md:pb-24 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <!-- Subtle abstract background pattern: communication waves -->
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="contactHeroPattern" patternUnits="userSpaceOnUse" width="120" height="120" patternTransform="scale(0.9) rotate(0)">
+                        <rect x="0" y="0" width="100%" height="100%" fill="rgba(255,255,255,0)"/>
+                        <circle cx="60" cy="60" r="50" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none"/>
+                        <circle cx="60" cy="60" r="35" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+                        <circle cx="60" cy="60" r="20" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#contactHeroPattern)"/>
+            </svg>
+        </div>
+        <div class="absolute top-1/3 left-10 w-32 h-32 bg-white/5 rounded-full filter blur-lg animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-10 w-40 h-40 bg-white/5 rounded-full filter blur-lg animate-pulse animation-delay-2000"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-down" data-aos-duration="1000">
+            <div class="mb-4 md:mb-6">
+                <nav class="text-sm" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                        <li class="inline-flex items-center">
+                            <a href="index.html" class="inline-flex items-center text-xs font-medium text-slate-200 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-home mr-1.5 opacity-80"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <i class="fas fa-chevron-right fa-xs text-slate-500 mr-1.5"></i>
+                                <span class="ms-1 text-xs font-medium text-white md:ms-2">Contact Us</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <h1 class="font-poppins text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-5 sm:mb-6 leading-tight">
+                Get in <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-300 via-pink-300 to-orange-300">Touch With Us</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+                We're here to help you navigate your financial journey. Whether you have a question, need advice, or want to discuss our services, our friendly team in Blackburn is ready to assist.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact-form" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-red-600 bg-white hover:bg-slate-100 transition-colors duration-300 px-8 py-3.5 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                    Send Us a Message <i class="fas fa-paper-plane ml-2"></i>
+                </a>
+                <a href="tel:01254405737" class="inline-flex items-center justify-center font-poppins text-base font-semibold border-2 border-white text-white hover:bg-white hover:text-red-600 transition-colors duration-300 px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105">
+                    Call Us Directly <i class="fas fa-phone-volume ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section id="contact-details" class="py-16 md:py-24 bg-slate-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-poppins text-sm font-semibold text-red-600 uppercase tracking-wider">Connect With AccounTaxation</span>
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">
+                    Multiple Ways to <span class="sparkle-text">Reach Our Team</span>
+                </h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    We strive to be accessible. Choose the method that works best for you, and we'll respond promptly.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                <!-- Contact Card 1: Phone -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-xl soft-shadow-card hover:shadow-red-100 transition-all duration-300 transform hover:-translate-y-1.5 border-t-4 border-red-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-red-500 to-pink-500 text-white text-3xl mb-6 shadow-lg mx-auto">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="font-poppins text-xl text-center font-semibold text-slate-800 mb-3">Call Us</h3>
+                    <p class="text-slate-600 text-sm text-center mb-5 leading-relaxed">
+                        Speak directly to a member of our friendly team for immediate assistance or to book an appointment.
+                    </p>
+                    <div class="text-center space-y-2">
+                        <a href="tel:01254405737" class="block font-poppins text-lg font-semibold text-red-600 hover:text-red-800 transition-colors duration-300">
+                            <i class="fas fa-tty mr-2 opacity-70"></i>01254 405737
+                        </a>
+                        <a href="tel:07813133215" class="block font-poppins text-md text-slate-700 hover:text-red-700 transition-colors duration-300">
+                            <i class="fas fa-mobile-alt mr-2 opacity-70"></i>07813 133215
+                        </a>
+                        <a href="tel:07867966636" class="block font-poppins text-md text-slate-700 hover:text-red-700 transition-colors duration-300">
+                            <i class="fas fa-mobile-alt mr-2 opacity-70"></i>07867 966636
+                        </a>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-red-100 text-center">
+                        <p class="text-xs text-slate-400">We're here to listen.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Card 2: Email -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-xl soft-shadow-card hover:shadow-pink-100 transition-all duration-300 transform hover:-translate-y-1.5 border-t-4 border-pink-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 text-white text-3xl mb-6 shadow-lg mx-auto">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h3 class="font-poppins text-xl text-center font-semibold text-slate-800 mb-3">Email Us</h3>
+                    <p class="text-slate-600 text-sm text-center mb-5 leading-relaxed">
+                        Send us your queries or documents, and we'll get back to you as soon as possible, typically within one business day.
+                    </p>
+                    <div class="text-center">
+                        <a href="mailto:info@accountaxation.co.uk" class="block font-poppins text-lg font-semibold text-pink-600 hover:text-pink-800 transition-colors duration-300 break-all">
+                            <i class="fas fa-at mr-2 opacity-70"></i>info@accountaxation.co.uk
+                        </a>
+                        <p class="text-xs text-slate-500 mt-1">(Placeholder Email)</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-pink-100 text-center">
+                        <p class="text-xs text-slate-400">Detailed queries welcome.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Card 3: Visit Us -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-xl soft-shadow-card hover:shadow-orange-100 transition-all duration-300 transform hover:-translate-y-1.5 border-t-4 border-orange-500" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 text-white text-3xl mb-6 shadow-lg mx-auto">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="font-poppins text-xl text-center font-semibold text-slate-800 mb-3">Visit Our Office</h3>
+                    <p class="text-slate-600 text-sm text-center mb-5 leading-relaxed">
+                        Our Blackburn office is walk-in friendly. Feel free to drop by for a face-to-face consultation. Appointments are recommended.
+                    </p>
+                    <div class="text-center">
+                        <p class="font-poppins text-md font-semibold text-orange-600">
+                            <i class="fas fa-building mr-2 opacity-70"></i>14 B JOHNSTON STREET<br>BLACKBURN, BB2 1ES
+                        </p>
+                    </div>
+                     <div class="mt-6 pt-4 border-t border-orange-100 text-center">
+                        <p class="text-xs text-slate-400">We look forward to meeting you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Decorative Shape Divider -->
+    <div class="relative h-24 md:h-32 overflow-hidden">
+        <div class="absolute inset-0 bg-slate-100"></div>
+        <svg class="absolute bottom-0 w-full h-full text-white z-10" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon points="0,100 50,0 100,100"/>
+        </svg>
+         <svg class="absolute top-0 w-full h-full text-slate-100 transform rotate-180" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon points="0,100 50,0 100,100"/>
+        </svg>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-poppins text-sm font-semibold text-red-600 uppercase tracking-wider">Send a Secure Message</span>
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">
+                    Let's Discuss <span class="sparkle-text">Your Needs</span>
+                </h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    Use the form below to send us a message. We'll review your inquiry and get back to you promptly to discuss how AccounTaxation can assist you.
+                </p>
+                <div class="mt-6 flex justify-center">
+                    <div class="w-20 h-1.5 bg-gradient-to-r from-red-500 to-pink-600 rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-gradient-to-br from-slate-50 via-red-50 to-pink-50 p-8 md:p-12 rounded-xl shadow-2xl soft-shadow-card-darker" data-aos="zoom-in-up">
+                <form action="#" method="POST" class="space-y-8">
+                    <div class="grid sm:grid-cols-2 gap-x-6 gap-y-8">
+                        <div>
+                            <label for="full-name" class="block text-sm font-poppins font-semibold text-slate-700 mb-1.5">Full Name <span class="text-red-500">*</span></label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <input type="text" name="full-name" id="full-name" autocomplete="name" required class="block w-full pl-10 pr-3 py-2.5 border border-slate-300 rounded-lg shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm placeholder-slate-400 transition duration-150 ease-in-out" placeholder="e.g., John Doe">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-poppins font-semibold text-slate-700 mb-1.5">Email Address <span class="text-red-500">*</span></label>
+                             <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fas fa-at"></i>
+                                </div>
+                                <input type="email" name="email" id="email" autocomplete="email" required class="block w-full pl-10 pr-3 py-2.5 border border-slate-300 rounded-lg shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm placeholder-slate-400 transition duration-150 ease-in-out" placeholder="you@example.com">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="phone-number" class="block text-sm font-poppins font-semibold text-slate-700 mb-1.5">Phone Number</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full pl-10 pr-3 py-2.5 border border-slate-300 rounded-lg shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm placeholder-slate-400 transition duration-150 ease-in-out" placeholder="Optional">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-poppins font-semibold text-slate-700 mb-1.5">Subject / Service of Interest <span class="text-red-500">*</span></label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <select id="subject" name="subject" required class="block w-full pl-10 pr-10 py-2.5 border border-slate-300 bg-white rounded-lg shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm appearance-none transition duration-150 ease-in-out">
+                                <option value="" disabled selected>Select a service or topic...</option>
+                                <option value="Welfare & Hardship Support">Welfare & Hardship Support</option>
+                                <option value="Personal Accountancy & Tax">Personal Accountancy & Tax</option>
+                                <option value="Business Accountancy & Advisory">Business Accountancy & Advisory</option>
+                                <option value="Self-Assessment Tax Return">Self-Assessment Tax Return</option>
+                                <option value="Universal Credit / PIP / Benefits">Universal Credit / PIP / Benefits</option>
+                                <option value="Bookkeeping / VAT / Payroll">Bookkeeping / VAT / Payroll</option>
+                                <option value="Business Setup / Startup Advice">Business Setup / Startup Advice</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Leave Feedback / Testimonial">Leave Feedback / Testimonial</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-slate-400">
+                                <i class="fas fa-chevron-down fa-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-poppins font-semibold text-slate-700 mb-1.5">Your Message <span class="text-red-500">*</span></label>
+                        <div class="relative">
+                            <div class="absolute top-3 left-0 pl-3 flex items-start pointer-events-none text-slate-400">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <textarea id="message" name="message" rows="5" required class="block w-full pl-10 pr-3 py-2.5 border border-slate-300 rounded-lg shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm placeholder-slate-400 transition duration-150 ease-in-out" placeholder="Please describe your situation or question in detail..."></textarea>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <input id="consent" name="consent" type="checkbox" required class="h-4 w-4 text-red-600 border-slate-300 rounded focus:ring-red-500">
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="consent" class="font-medium text-slate-700">I consent to AccounTaxation contacting me regarding my inquiry and agree to the <a href="#" class="text-red-600 hover:underline">Privacy Policy</a>.<span class="text-red-500">*</span></label>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full flex items-center justify-center font-poppins text-lg font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105">
+                            Send Secure Message <i class="fas fa-lock ml-3"></i>
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-500 text-center">
+                        We aim to respond within 24 business hours. For urgent matters, please call us.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Location Map & Hours Section -->
+    <section id="office-location" class="py-16 md:py-24 bg-slate-100 relative curved-section-top curved-section-bottom">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="900">
+                    <span class="font-poppins text-sm font-semibold text-red-600 uppercase tracking-wider">Find Our Blackburn Office</span>
+                    <h2 class="font-poppins text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-6 leading-tight">
+                        Visit Us for a <span class="sparkle-text">Personal Consultation</span>
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Our office is conveniently located in Blackburn, ready to welcome you. We recommend calling ahead to schedule an appointment to ensure we can dedicate the necessary time to your needs.
+                    </p>
+                    <div class="bg-white p-6 rounded-lg shadow-lg mb-8 border-l-4 border-red-500">
+                        <h4 class="font-poppins text-xl font-semibold text-slate-800 mb-3 flex items-center">
+                            <i class="fas fa-clock text-red-500 mr-3"></i> Office Hours
+                        </h4>
+                        <ul class="text-slate-600 space-y-1.5 text-sm">
+                            <li><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</li>
+                            <li><strong>Saturday:</strong> 10:00 AM - 2:00 PM (By Appointment)</li>
+                            <li><strong>Sunday:</strong> Closed</li>
+                        </ul>
+                        <p class="text-xs text-slate-500 mt-3">Evening appointments may be available upon request.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                         <a href="https://www.google.com/maps/search/?api=1&query=14+B+JOHNSTON+STREET+BLACKBURN+BB2+1ES" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center font-poppins text-sm font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-6 py-3 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105">
+                            Get Directions <i class="fas fa-directions ml-2"></i>
+                        </a>
+                        <div class="sparkle-border-button">
+                            <button onclick="window.location.href='tel:01254405737'" class="w-full sm:w-auto inline-flex items-center justify-center font-poppins text-sm font-semibold px-6 py-3 rounded-lg shadow-sm transform hover:scale-105">
+                                Call to Book <i class="fas fa-calendar-alt ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mt-10 lg:mt-0 rounded-xl shadow-2xl overflow-hidden gradient-border" data-aos="zoom-in-left" data-aos-duration="900" data-aos-delay="200">
+                    <!-- Placeholder for Google Maps Embed -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2361.535534651064!2d-2.491568684319304!3d53.74401898006398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b995387275e37%3A0x8c3c77f75f87407a!2s14B%20Johnston%20St%2C%20Blackburn%20BB2%201ES!5e0!3m2!1sen!2suk!4v1670000000000!5m2!1sen!2suk" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="AccounTaxation Office Location Map"
+                        class="rounded-lg">
+                    </iframe>
+                     <div class="absolute bottom-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-md shadow-lg text-xs text-slate-700">
+                        <i class="fas fa-map-pin text-red-500 mr-1"></i> 14 B Johnston St, Blackburn
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions (Simplified for Contact Page) -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="font-poppins text-sm font-semibold text-red-600 uppercase tracking-wider">Quick Answers</span>
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">
+                    Common <span class="sparkle-text">Contact Queries</span>
+                </h2>
+            </div>
+            <div class="max-w-2xl mx-auto space-y-5">
+                <div class="bg-slate-50 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="font-poppins text-lg font-semibold text-slate-800 mb-1.5 flex items-center">
+                        <i class="fas fa-question-circle text-red-500 mr-3"></i>What's the best way to get urgent help?
+                    </h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        For urgent matters, especially concerning welfare or time-sensitive tax issues, please <strong class="text-red-600">call us directly</strong> on <a href="tel:01254405737" class="hover:underline font-semibold">01254 405737</a> during office hours.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+                     <h4 class="font-poppins text-lg font-semibold text-slate-800 mb-1.5 flex items-center">
+                        <i class="fas fa-question-circle text-pink-500 mr-3"></i>Is there a fee for an initial consultation?
+                    </h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        We offer a <strong class="text-pink-600">free initial consultation</strong> to discuss your needs and how we can assist. This allows us to understand your situation and for you to learn about our services with no obligation.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="font-poppins text-lg font-semibold text-slate-800 mb-1.5 flex items-center">
+                        <i class="fas fa-question-circle text-orange-500 mr-3"></i>What documents should I bring to my first appointment?
+                    </h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        This depends on the service you require. When you book an appointment, we will advise you on any specific documents to bring. Generally, relevant financial statements, HMRC correspondence, or benefit letters are helpful.
+                    </p>
+                </div>
+            </div>
+             <div class="mt-12 text-center" data-aos="fade-up">
+                <p class="text-slate-700 mb-3">Have more questions?</p>
+                <a href="tel:01254405737" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-8 py-3 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105">
+                    Call Our Friendly Team <i class="fas fa-phone-square-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final spacing elements -->
+    <div class="py-6 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <hr class="border-t-2 border-dashed border-red-200 w-1/2 mx-auto">
+        </div>
+    </div>
+    <div class="py-4 bg-white"><!-- spacer --></div>
+    <div class="py-4 bg-slate-50"><!-- spacer --></div>
+    <div class="py-3 bg-white"><!-- spacer --></div>
+    <div class="py-3 bg-slate-50"><!-- spacer --></div>
+    <div class="py-2 bg-white"><!-- spacer --></div>
+    <div class="py-2 bg-slate-50"><!-- spacer --></div>
+    <div class="py-1 bg-white"><!-- spacer --></div>
+    <div class="py-1 bg-slate-50"><!-- spacer --></div>
+
+</main>
+
+     <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-pink-500 to-orange-500"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- About AccounTaxation -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="flex items-center group">
+                        <svg class="h-8 w-8 text-red-500 group-hover:text-red-400 transition-colors duration-300 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                        </svg>
+                        <span class="font-poppins font-bold text-xl text-white group-hover:text-red-400 transition-colors duration-300">AccounTaxation</span>
+                    </a>
+                    <p class="text-sm leading-relaxed">
+                        Guiding individuals out of financial struggle and businesses into financial strength. Your trusted local partner in Blackburn.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="#" aria-label="Facebook" class="text-slate-400 hover:text-red-500 transition-colors duration-300"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" aria-label="Twitter" class="text-slate-400 hover:text-red-500 transition-colors duration-300"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="text-slate-400 hover:text-red-500 transition-colors duration-300"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="font-poppins text-lg font-semibold text-white mb-5">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Home</a></li>
+                        <li><a href="about.html" class="hover:text-red-400 transition-colors duration-300 text-sm">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Our Services</a></li>
+                        <li><a href="reviews.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Client Reviews</a></li>
+                        <li><a href="contact.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Contact & Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="font-poppins text-lg font-semibold text-white mb-5">Core Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html#welfare" class="hover:text-red-400 transition-colors duration-300 text-sm">Welfare & Hardship Support</a></li>
+                        <li><a href="services.html#personal-accountancy" class="hover:text-red-400 transition-colors duration-300 text-sm">Personal Accountancy</a></li>
+                        <li><a href="services.html#business-accountancy" class="hover:text-red-400 transition-colors duration-300 text-sm">Business Advisory</a></li>
+                        <li><a href="contact.html#contact-form" class="hover:text-red-400 transition-colors duration-300 text-sm">Tax Return Filing</a></li>
+                        <li><a href="contact.html#contact-form" class="hover:text-red-400 transition-colors duration-300 text-sm">Benefit Claims Assistance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="font-poppins text-lg font-semibold text-white mb-5">Get In Touch</h4>
+                    <address class="not-italic space-y-3 text-sm">
+                        <p class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-red-500 flex-shrink-0"></i>
+                            <span>14 B JOHNSTON STREET<br>BLACKBURN, BB2 1ES</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-red-500"></i>
+                            <a href="tel:01254405737" class="hover:text-red-400 transition-colors duration-300">01254 405737</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-mobile-alt mr-3 text-red-500"></i>
+                            <a href="tel:07813133215" class="hover:text-red-400 transition-colors duration-300">07813 133215</a>
+                        </p>
+                         <p class="flex items-center">
+                            <i class="fas fa-mobile-alt mr-3 text-red-500"></i>
+                            <a href="tel:07867966636" class="hover:text-red-400 transition-colors duration-300">07867 966636</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-red-500"></i>
+                            <a href="mailto:info@accountaxation.co.uk" class="hover:text-red-400 transition-colors duration-300">info@accountaxation.co.uk</a> (Placeholder)
+                        </p>
+                    </address>
+                    <div class="mt-6">
+                        <a href="contact.html" class="inline-flex items-center font-poppins text-sm font-semibold text-white bg-red-600 hover:bg-red-700 transition-colors duration-300 px-6 py-2.5 rounded-md shadow hover:shadow-lg">
+                            Send Us A Message <i class="fas fa-paper-plane ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-700 pt-8 mt-8 text-center text-sm">
+                <p>© <span id="currentYear"></span> AccounTaxation Accountancy Services. All Rights Reserved.</p>
+                <p class="mt-1">Designed with <i class="fas fa-heart text-red-500"></i> for the Blackburn Community.</p>
+                 <p class="mt-2 text-xs text-slate-500">
+                    This website is for informational purposes only and does not constitute financial advice.
+                </p>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-12 h-12 md:w-20 md:h-20 opacity-10">
+             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#EF4444" d="M48.1,-61.1C62.3,-52.7,73.8,-39.5,78.2,-24.1C82.7,-8.7,79.9,8.8,72.7,23.7C65.5,38.6,53.8,50.9,40.4,59.4C27,67.9,13.5,72.6,-0.5,73.1C-14.5,73.6,-29.1,69.9,-42.3,62C-55.6,54.2,-67.7,42.2,-73.3,27.9C-78.9,13.6,-78.1,-3,-72.4,-17.7C-66.7,-32.3,-56.1,-45,-43.2,-54.2C-30.3,-63.3,-15.2,-68.9,0.8,-70.1C16.7,-71.3,33. equilíbrio,-69.6,48.1,-61.1Z" transform="translate(100 100) scale(0.8)" /></svg>
+        </div>
+         <div class="absolute top-10 right-0 w-12 h-12 md:w-20 md:h-20 opacity-10">
+             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#EC4899" d="M48.1,-61.1C62.3,-52.7,73.8,-39.5,78.2,-24.1C82.7,-8.7,79.9,8.8,72.7,23.7C65.5,38.6,53.8,50.9,40.4,59.4C27,67.9,13.5,72.6,-0.5,73.1C-14.5,73.6,-29.1,69.9,-42.3,62C-55.6,54.2,-67.7,42.2,-73.3,27.9C-78.9,13.6,-78.1,-3,-72.4,-17.7C-66.7,-32.3,-56.1,-45,-43.2,-54.2C-30.3,-63.3,-15.2,-68.9,0.8,-70.1C16.7,-71.3,33. equilíbrio,-69.6,48.1,-61.1Z" transform="translate(100 100) rotate(45) scale(0.7)" /></svg>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button (Optional, but good UX) -->
+    <button id="backToTopBtn" title="Go to top" class="fixed bottom-6 right-6 w-12 h-12 sparkle-bg text-white rounded-full shadow-lg hover:opacity-80 transition-opacity duration-300 z-50 hidden items-center justify-center text-xl">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // values from 0 to 3000, with step 50ms
+            once: true, // whether animation should happen only once - while scrolling down
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Open mobile menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                mobileMenuButton.setAttribute('aria-label', 'Close mobile menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        // Dynamic year for footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Sticky Header background change on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white/95', 'shadow-lg');
+                header.classList.remove('bg-white/80');
+            } else {
+                header.classList.remove('bg-white/95', 'shadow-lg');
+                header.classList.add('bg-white/80');
+
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.classList.remove('hidden');
+                backToTopBtn.classList.add('flex');
+            } else {
+                backToTopBtn.classList.add('hidden');
+                backToTopBtn.classList.remove('flex');
+            }
+        };
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AccounTaxation: Guiding individuals out of financial struggle and businesses into financial strength. Expert accountancy and welfare support in Blackburn.">
+    <meta name="keywords" content="accountancy Blackburn, welfare support, tax returns, Universal Credit, PIP, ESA, business accounting, financial hardship, AccounTaxation">
+    <meta name="author" content="AccounTaxation Accountancy Services">
+    <title>AccounTaxation | Financial Clarity & Support in Blackburn</title>
+
+    <!-- Favicon (placeholder - replace with actual favicon.ico or .png) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            color: #1a202c; /* Dark text for contrast */
+        }
+
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .sparkle-text {
+            background: linear-gradient(to right, #ef4444, #ec4899, #f97316);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .sparkle-bg {
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+        }
+
+        .sparkle-border-button {
+            position: relative;
+            padding: 1px; /* Controls border thickness */
+            border-radius: 0.5rem; /* Match button's border-radius */
+            background: linear-gradient(to right, #ef4444, #ec4899, #f97316);
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .sparkle-border-button > button {
+            background-color: #ffffff; /* Or your desired button background */
+            color: #ef4444; /* Text color that contrasts with gradient */
+            transition: all 0.3s ease;
+        }
+        
+        .sparkle-border-button:hover > button {
+            background-color: transparent;
+            color: #ffffff;
+        }
+        
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .glassmorphism-darker {
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .curved-section-top::before {
+            content: '';
+            position: absolute;
+            top: -1px; /* Prevent thin line */
+            left: 0;
+            width: 100%;
+            height: 100px; /* Adjust height of the curve */
+            background-color: #f8fafc; /* Match the body background or previous section's bg */
+            clip-path: ellipse(70% 100% at 50% 100%); /* Curve shape */
+            z-index: 0;
+        }
+
+        .curved-section-bottom::after {
+            content: '';
+            position: absolute;
+            bottom: -1px; /* Prevent thin line */
+            left: 0;
+            width: 100%;
+            height: 100px; /* Adjust height of the curve */
+            background-color: #f8fafc; /* Match the body background or next section's bg */
+            clip-path: ellipse(70% 100% at 50% 0%); /* Curve shape */
+            z-index: 0;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ef4444; /* Red-500 */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dc2626; /* Red-600 */
+        }
+
+        /* Decorative elements */
+        .deco-sparkle-dot {
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(135deg, #ef4444, #ec4899);
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+        }
+        .header-shadow {
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+        .soft-shadow-card {
+            box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.1), 0 8px 10px -6px rgba(239, 68, 68, 0.1);
+        }
+        .soft-shadow-card-darker {
+             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-border {
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            -webkit-background-clip: padding-box;
+            position: relative;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -2px; /* same as border width */
+            border-radius: inherit; /* inherit container's border-radius */
+            background: linear-gradient(to right, #ef4444, #ec4899, #f97316);
+        }
+
+        /* For Services Page Popups */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .popup-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .popup-overlay.active .popup-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased leading-relaxed">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out header-shadow bg-white/80 backdrop-blur-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center group" aria-label="AccounTaxation Home">
+                        <svg class="h-10 w-10 text-red-600 group-hover:text-red-700 transition-colors duration-300 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                        </svg>
+                        <span class="font-poppins font-bold text-2xl text-slate-800 group-hover:text-red-600 transition-colors duration-300">AccounTaxation</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-2 items-center">
+                    <a href="index.html" class="font-poppins text-sm font-semibold text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300" aria-current="page">Home</a>
+                    <a href="about.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">About Us</a>
+                    <a href="services.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">Services</a>
+                    <a href="reviews.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">Reviews</a>
+                    <a href="contact.html" class="font-poppins text-sm font-semibold text-slate-700 hover:text-red-600 px-4 py-2 rounded-md hover:bg-red-50 transition-colors duration-300">Contact</a>
+                    <div class="pl-2">
+                        <a href="contact.html#contact-form" class="font-poppins text-sm font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-6 py-3 rounded-lg shadow-md hover:shadow-lg">
+                            Get Support <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-700 hover:text-red-600 focus:outline-none focus:text-red-600 p-2" aria-label="Open mobile menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl rounded-b-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block font-poppins text-base font-semibold text-red-600 bg-red-50 px-3 py-2 rounded-md" aria-current="page">Home</a>
+                <a href="about.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">About Us</a>
+                <a href="services.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">Services</a>
+                <a href="reviews.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">Reviews</a>
+                <a href="contact.html" class="block font-poppins text-base font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-md">Contact Us</a>
+            </div>
+            <div class="px-4 py-4 border-t border-slate-200">
+                 <a href="contact.html#contact-form" class="w-full flex items-center justify-center font-poppins text-base font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-6 py-3 rounded-lg shadow-md hover:shadow-lg">
+                    Get Urgent Support <i class="fas fa-headset ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main class="pt-20 bg-slate-50"> <!-- pt-20 to offset fixed header -->
+
+    <!-- Services Hero Section -->
+    <section class="relative bg-gradient-to-tr from-red-600 via-pink-600 to-orange-600 pt-28 pb-16 md:pt-36 md:pb-24 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <!-- Subtle abstract background pattern -->
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="servicesHeroPattern" patternUnits="userSpaceOnUse" width="70" height="70" patternTransform="scale(1.5) rotate(-10)"><rect x="0" y="0" width="100%" height="100%" fill="rgba(255,255,255,0)"/><path d="M10 10 Q 20 40 30 10 T 50 10 M60 10 Q 70 40 80 10 T 100 10" stroke-width="0.3" stroke="rgba(255, 255, 255, 0.7)" fill="none"/></pattern></defs><rect width="100%" height="100%" fill="url(#servicesHeroPattern)"/></svg>
+        </div>
+        <div class="absolute top-1/3 left-5 w-28 h-28 bg-white/10 rounded-full filter blur-xl animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-5 w-36 h-36 bg-white/10 rounded-full filter blur-xl animate-pulse animation-delay-3000"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-down" data-aos-duration="1000">
+            <div class="mb-4 md:mb-6">
+                <nav class="text-sm" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                        <li class="inline-flex items-center">
+                            <a href="index.html" class="inline-flex items-center text-xs font-medium text-slate-200 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-home mr-1.5 opacity-80"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <i class="fas fa-chevron-right fa-xs text-slate-500 mr-1.5"></i>
+                                <span class="ms-1 text-xs font-medium text-white md:ms-2">Our Services</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <h1 class="font-poppins text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-5 sm:mb-6 leading-tight">
+                Comprehensive Financial <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-300 via-pink-300 to-orange-300">Solutions</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+                AccounTaxation offers a unique blend of expert accountancy and compassionate welfare support, tailored to meet the diverse financial needs of individuals and businesses in Blackburn.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#core-services-grid" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-slate-800 bg-white hover:bg-slate-100 transition-colors duration-300 px-8 py-3.5 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                    Explore Service Categories <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+                <div class="sparkle-border-button">
+                     <button onclick="window.location.href='contact.html#contact-form'" class="w-full sm:w-auto inline-flex items-center justify-center font-poppins text-base font-semibold px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 !text-white hover:!bg-white/10 !bg-transparent">
+                        Request a Consultation <i class="fas fa-calendar-check ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Introduction Section -->
+    <section class="py-16 md:py-24 bg-slate-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-poppins text-sm font-semibold text-red-600 uppercase tracking-wider">Our Promise</span>
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">
+                    Guidance Every Step of <span class="sparkle-text">Your Financial Journey</span>
+                </h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    Whether you're facing financial hardship, managing personal taxes, or growing your business, we provide clear, actionable advice and dedicated support. Our services are designed to bring clarity, stability, and strength to your finances.
+                </p>
+                <div class="mt-8 flex justify-center items-center space-x-4 text-slate-500">
+                    <div class="flex items-center" data-aos="fade-right" data-aos-delay="100">
+                        <i class="fas fa-check-circle text-xl text-red-500 mr-2"></i>
+                        <span class="text-sm">Personalized Approach</span>
+                    </div>
+                    <div class="w-1 h-1 bg-slate-400 rounded-full"></div>
+                    <div class="flex items-center" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-thumbs-up text-xl text-pink-500 mr-2"></i>
+                        <span class="text-sm">Expert Knowledge</span>
+                    </div>
+                     <div class="w-1 h-1 bg-slate-400 rounded-full"></div>
+                    <div class="flex items-center" data-aos="fade-left" data-aos-delay="300">
+                        <i class="fas fa-handshake text-xl text-orange-500 mr-2"></i>
+                        <span class="text-sm">Community Trusted</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services Grid Section -->
+    <section id="core-services-grid" class="py-16 md:py-20 bg-white relative curved-section-top">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+             <div class="grid lg:grid-cols-3 gap-8 md:gap-10">
+
+                <!-- Service Card 1: Welfare & Hardship Support -->
+                <div class="flex flex-col bg-gradient-to-br from-red-50 via-pink-50 to-orange-50 rounded-xl shadow-2xl soft-shadow-card hover:shadow-red-200 p-8 transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6 text-center">
+                        <div class="inline-block p-4 bg-gradient-to-br from-red-500 to-pink-600 text-white rounded-full shadow-lg mb-5">
+                            <i class="fas fa-hands-helping text-4xl"></i>
+                        </div>
+                        <h3 class="font-poppins text-2xl font-bold text-slate-800 mb-2">Specialist Welfare & Financial Hardship Division</h3>
+                        <p class="text-sm text-red-700 font-semibold">Support When You Need It Most</p>
+                    </div>
+                    <p class="text-slate-600 mb-6 leading-relaxed text-sm flex-grow">
+                        Navigating the UK benefit system can be overwhelming. We provide expert assistance to help individuals and families claim the benefits they are entitled to, manage debt, and overcome financial hardship with dignity and support.
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2 mb-8 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-red-500 mr-2"></i> Benefit Claims & Appeals</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-red-500 mr-2"></i> Debt Advice & Liaison</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-red-500 mr-2"></i> Hardship Fund Applications</li>
+                    </ul>
+                    <div class="mt-auto text-center">
+                        <button onclick="openPopup('popup-welfare')" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg">
+                            Learn More & Get Help <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                     <div class="mt-6 pt-4 border-t border-red-200 text-center">
+                        <p class="text-xs text-slate-500">Empowering you towards financial stability.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Personal Accountancy & Taxation -->
+                <div class="flex flex-col bg-gradient-to-br from-sky-50 via-indigo-50 to-purple-50 rounded-xl shadow-2xl soft-shadow-card hover:shadow-indigo-200 p-8 transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-6 text-center">
+                        <div class="inline-block p-4 bg-gradient-to-br from-sky-500 to-indigo-600 text-white rounded-full shadow-lg mb-5">
+                            <i class="fas fa-user-tie text-4xl"></i>
+                        </div>
+                        <h3 class="font-poppins text-2xl font-bold text-slate-800 mb-2">Personal Accountancy & Taxation Services</h3>
+                        <p class="text-sm text-indigo-700 font-semibold">Optimizing Your Personal Finances</p>
+                    </div>
+                    <p class="text-slate-600 mb-6 leading-relaxed text-sm flex-grow">
+                        For individuals, sole traders, landlords, and high earners, we offer comprehensive personal accounting and tax services. Our goal is to ensure compliance, maximize your savings, and simplify your financial affairs.
+                    </p>
+                     <ul class="text-sm text-slate-500 space-y-2 mb-8 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-sky-500 mr-2"></i> Self-Assessment Tax Returns</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-sky-500 mr-2"></i> Capital Gains & Inheritance Tax</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-sky-500 mr-2"></i> Landlord Income Management</li>
+                    </ul>
+                    <div class="mt-auto text-center">
+                        <button onclick="openPopup('popup-personal')" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-white bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-600 hover:opacity-90 transition-opacity duration-300 px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg">
+                            Details & Tax Planning <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                     <div class="mt-6 pt-4 border-t border-sky-200 text-center">
+                        <p class="text-xs text-slate-500">Clarity and precision for your peace of mind.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Business Accountancy & Advisory -->
+                <div class="flex flex-col bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 rounded-xl shadow-2xl soft-shadow-card hover:shadow-teal-200 p-8 transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-6 text-center">
+                        <div class="inline-block p-4 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-full shadow-lg mb-5">
+                            <i class="fas fa-briefcase text-4xl"></i>
+                        </div>
+                        <h3 class="font-poppins text-2xl font-bold text-slate-800 mb-2">Business Accountancy & Advisory (SMEs & Startups)</h3>
+                        <p class="text-sm text-teal-700 font-semibold">Fueling Your Business Growth</p>
+                    </div>
+                    <p class="text-slate-600 mb-6 leading-relaxed text-sm flex-grow">
+                        We partner with Small to Medium Enterprises (SMEs) and startups, providing robust accounting, tax, and advisory services. From bookkeeping to strategic planning, we help your business thrive and stay compliant.
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2 mb-8 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Bookkeeping, VAT & Payroll</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Corporation Tax & Accounts</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Business Setup & Cash Flow</li>
+                    </ul>
+                    <div class="mt-auto text-center">
+                         <button onclick="openPopup('popup-business')" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-white bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-600 hover:opacity-90 transition-opacity duration-300 px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg">
+                            Explore Business Solutions <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                     <div class="mt-6 pt-4 border-t border-emerald-200 text-center">
+                        <p class="text-xs text-slate-500">Your partner in achieving business success.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="400">
+                <p class="text-lg text-slate-700 mb-4">Can't find what you're looking for or have a specific query?</p>
+                <a href="contact.html" class="inline-flex items-center justify-center font-poppins text-lg font-semibold text-white bg-slate-800 hover:bg-slate-900 transition-colors duration-300 px-10 py-4 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105">
+                    Contact Us Directly <i class="fas fa-headset ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Decorative Divider Section -->
+    <section class="py-12 md:py-16 bg-slate-100 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="decoPatternServices" patternUnits="userSpaceOnUse" width="100" height="100" patternTransform="scale(0.8) rotate(0)"><rect x="0" y="0" width="100%" height="100%" fill="hsla(0,0%,100%,0)"/><path d="M25 0 L25 100 M0 25 L100 25 M75 0 L75 100 M0 75 L100 75" stroke-width="1" stroke="hsla(12, 94%, 53%, 0.2)"/></pattern></defs><rect width="100%" height="100%" fill="url(#decoPatternServices)"/></svg>
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="zoom-in">
+            <h3 class="font-poppins text-2xl md:text-3xl font-semibold text-slate-700 mb-3">
+                Your Financial Clarity, Our Commitment.
+            </h3>
+            <p class="text-slate-500 max-w-xl mx-auto">
+                We believe in making complex financial matters understandable and manageable for everyone in Blackburn.
+            </p>
+             <div class="mt-6 flex justify-center space-x-2">
+                <span class="deco-sparkle-dot w-3 h-3 bg-red-400"></span>
+                <span class="deco-sparkle-dot w-3 h-3 bg-pink-400"></span>
+                <span class="deco-sparkle-dot w-3 h-3 bg-orange-400"></span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- "How We Work" Process Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-poppins text-sm font-semibold text-red-600 uppercase tracking-wider">Our Approach</span>
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">
+                    A Simple Path to <span class="sparkle-text">Your Solution</span>
+                </h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    We aim to make accessing our services straightforward and stress-free. Here’s how we typically work with you:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Step 1 -->
+                <div class="p-6 rounded-xl border border-red-100 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-5">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-red-400 to-red-600 text-white text-2xl shadow-lg ring-4 ring-red-100">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                    </div>
+                    <h4 class="font-poppins text-xl font-semibold text-slate-800 mb-2">1. Initial Consultation</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Reach out to us. We'll have a friendly, no-obligation chat to understand your needs and how we can help. This can be over the phone, online, or in our Blackburn office.
+                    </p>
+                    <div class="mt-4">
+                        <a href="contact.html" class="text-xs font-semibold text-red-600 hover:underline">Book Yours Free <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="p-6 rounded-xl border border-pink-100 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-5">
+                         <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 text-white text-2xl shadow-lg ring-4 ring-pink-100">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                    </div>
+                    <h4 class="font-poppins text-xl font-semibold text-slate-800 mb-2">2. Tailored Plan & Proposal</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Based on our discussion, we'll outline a clear plan of action and services tailored to your specific situation, along with transparent pricing. No hidden fees, ever.
+                    </p>
+                     <div class="mt-4">
+                        <span class="text-xs text-pink-600">Clear & Transparent</span>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-6 rounded-xl border border-orange-100 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-5">
+                         <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 text-white text-2xl shadow-lg ring-4 ring-orange-100">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                    <h4 class="font-poppins text-xl font-semibold text-slate-800 mb-2">3. Dedicated Support & Action</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Once you're happy to proceed, our team gets to work, providing dedicated support, expert execution, and regular updates until your financial goals are achieved.
+                    </p>
+                    <div class="mt-4">
+                        <span class="text-xs text-orange-600">Ongoing Partnership</span>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-12 text-center" data-aos="fade-up">
+                <a href="contact.html#contact-form" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105">
+                    Start Your Journey With Us <i class="fas fa-rocket ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popups (Modals) Container - Hidden by default -->
+    <!-- Popup for Welfare & Hardship Support -->
+    <div id="popup-welfare" class="popup-overlay">
+        <div class="popup-content glassmorphism relative max-h-[90vh] md:max-h-[80vh]" data-aos="zoom-in-up">
+            <button onclick="closePopup('popup-welfare')" class="absolute top-4 right-5 text-slate-600 hover:text-red-500 text-2xl transition-colors duration-300" aria-label="Close welfare support details popup">
+                <i class="fas fa-times-circle"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="inline-block p-3 bg-gradient-to-br from-red-500 to-pink-600 text-white rounded-full shadow-lg mb-4">
+                    <i class="fas fa-hands-helping text-3xl"></i>
+                </div>
+                <h3 class="font-poppins text-2xl md:text-3xl font-bold text-slate-800 mb-2">Specialist Welfare & Financial Hardship Support</h3>
+                <p class="text-sm text-red-700 font-semibold">Guiding You Through Difficult Times</p>
+            </div>
+
+            <p class="text-slate-700 mb-6 leading-relaxed">
+                We understand that navigating the complexities of the UK benefit system or facing financial hardship can be incredibly stressful. Our dedicated team is here to provide compassionate, expert support to help you claim the benefits you rightfully deserve, manage debt effectively, and find a path towards financial stability.
+            </p>
+
+            <h4 class="font-poppins text-xl font-semibold text-slate-700 mb-4">We Assist With:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-slate-600 text-sm mb-6">
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Universal Credit (UC)</div>
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Personal Independence Payment (PIP)</div>
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Employment and Support Allowance (ESA)</div>
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Jobseeker's Allowance (JSA)</div>
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Child Benefits & Maternity Grants</div>
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Carer’s Allowance & Attendance Allowance</div>
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Disability Living Allowance (DLA for children)</div>
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Bereavement Support Payment</div>
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Pension Credits & Housing Benefits</div>
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Debt Advice & Council Support Liaison</div>
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Appeals Against Unfair Decisions</div>
+                <div class="flex items-center p-2 bg-red-50 rounded-md"><i class="fas fa-check text-red-500 mr-3 w-4"></i> Overpayment Issues Resolution</div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-red-100 to-pink-100 p-4 rounded-lg mb-6 shadow">
+                <h5 class="font-poppins text-md font-semibold text-red-800 mb-2 flex items-center"><i class="fas fa-star text-yellow-500 mr-2"></i> Our Best Experience:</h5>
+                <p class="text-sm text-red-700 leading-relaxed">"We’ve helped hundreds of struggling families secure life-changing financial support — especially those lost in the complexity of the UK benefit system. We pride ourselves on turning confusion into clarity and despair into hope."</p>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="contact.html?subject=WelfareSupportInquiry" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-white sparkle-bg hover:opacity-90 transition-opacity duration-300 px-10 py-3.5 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                    Discuss Your Situation Confidentially <i class="fas fa-user-shield ml-2"></i>
+                </a>
+                <p class="text-xs text-slate-500 mt-3">Your first step towards financial relief.</p>
+            </div>
+            <div class="mt-5 border-t border-slate-200 pt-3">
+                <p class="text-xs text-slate-400 text-center">AccounTaxation: Empathy. Expertise. Empowerment.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for Personal Accountancy -->
+    <div id="popup-personal" class="popup-overlay">
+        <div class="popup-content glassmorphism relative max-h-[90vh] md:max-h-[80vh]" data-aos="zoom-in-up">
+            <button onclick="closePopup('popup-personal')" class="absolute top-4 right-5 text-slate-600 hover:text-sky-500 text-2xl transition-colors duration-300" aria-label="Close personal accountancy details popup">
+                <i class="fas fa-times-circle"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="inline-block p-3 bg-gradient-to-br from-sky-500 to-indigo-600 text-white rounded-full shadow-lg mb-4">
+                    <i class="fas fa-user-tie text-3xl"></i>
+                </div>
+                <h3 class="font-poppins text-2xl md:text-3xl font-bold text-slate-800 mb-2">Personal Accountancy & Taxation Services</h3>
+                <p class="text-sm text-indigo-700 font-semibold">Secure Your Financial Future with Confidence</p>
+            </div>
+
+            <p class="text-slate-700 mb-6 leading-relaxed">
+                Managing your personal finances and tax obligations effectively is crucial for long-term stability and growth. We provide expert, tailored accountancy services for individuals, sole traders, landlords, and high-net-worth individuals. Our aim is to simplify complexities, ensure compliance, and identify opportunities for tax efficiency.
+            </p>
+
+            <h4 class="font-poppins text-xl font-semibold text-slate-700 mb-4">Our Personal Services Include:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-slate-600 text-sm mb-6">
+                <div class="flex items-center p-2 bg-sky-50 rounded-md"><i class="fas fa-check text-sky-500 mr-3 w-4"></i> Self-Assessment Tax Returns (SA100)</div>
+                <div class="flex items-center p-2 bg-sky-50 rounded-md"><i class="fas fa-check text-sky-500 mr-3 w-4"></i> Capital Gains Tax (CGT) Advice & Calculations</div>
+                <div class="flex items-center p-2 bg-sky-50 rounded-md"><i class="fas fa-check text-sky-500 mr-3 w-4"></i> Landlord Income & Property Tax Management</div>
+                <div class="flex items-center p-2 bg-sky-50 rounded-md"><i class="fas fa-check text-sky-500 mr-3 w-4"></i> Inheritance Tax (IHT) Introductory Planning</div>
+                <div class="flex items-center p-2 bg-sky-50 rounded-md"><i class="fas fa-check text-sky-500 mr-3 w-4"></i> Tax Planning for High Earners</div>
+                <div class="flex items-center p-2 bg-sky-50 rounded-md"><i class="fas fa-check text-sky-500 mr-3 w-4"></i> Sole Trader Accounts & Taxation</div>
+                <div class="flex items-center p-2 bg-sky-50 rounded-md"><i class="fas fa-check text-sky-500 mr-3 w-4"></i> HMRC Inquiry Support</div>
+                <div class="flex items-center p-2 bg-sky-50 rounded-md"><i class="fas fa-check text-sky-500 mr-3 w-4"></i> Residency & Domicile Tax Advice</div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-sky-100 to-indigo-100 p-4 rounded-lg mb-6 shadow">
+                <h5 class="font-poppins text-md font-semibold text-indigo-800 mb-2 flex items-center"><i class="fas fa-star text-yellow-500 mr-2"></i> Our Best Experience:</h5>
+                <p class="text-sm text-indigo-700 leading-relaxed">"We’ve consistently helped self-employed clients and landlords avoid costly penalties, maximize legal tax savings, and gain a clearer understanding of their financial position, empowering them to make informed decisions."</p>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="contact.html?subject=PersonalTaxInquiry" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-white bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-600 hover:opacity-90 transition-opacity duration-300 px-10 py-3.5 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                    Optimize Your Personal Taxes <i class="fas fa-chart-pie ml-2"></i>
+                </a>
+                <p class="text-xs text-slate-500 mt-3">Expert advice for your peace of mind.</p>
+            </div>
+             <div class="mt-5 border-t border-slate-200 pt-3">
+                <p class="text-xs text-slate-400 text-center">AccounTaxation: Precision. Planning. Prosperity.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for Business Accountancy -->
+    <div id="popup-business" class="popup-overlay">
+        <div class="popup-content glassmorphism relative max-h-[90vh] md:max-h-[80vh]" data-aos="zoom-in-up">
+            <button onclick="closePopup('popup-business')" class="absolute top-4 right-5 text-slate-600 hover:text-emerald-500 text-2xl transition-colors duration-300" aria-label="Close business accountancy details popup">
+                <i class="fas fa-times-circle"></i>
+            </button>
+            <div class="text-center mb-6">
+                 <div class="inline-block p-3 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-full shadow-lg mb-4">
+                    <i class="fas fa-briefcase text-3xl"></i>
+                </div>
+                <h3 class="font-poppins text-2xl md:text-3xl font-bold text-slate-800 mb-2">Business Accountancy & Advisory (SMEs & Startups)</h3>
+                <p class="text-sm text-teal-700 font-semibold">Strategic Financial Partnership for Growth</p>
+            </div>
+
+            <p class="text-slate-700 mb-6 leading-relaxed">
+                For small to medium-sized enterprises (SMEs) and ambitious startups, sound financial management is the bedrock of success. AccounTaxation offers a comprehensive suite of business accountancy and advisory services designed to ensure compliance, optimize financial performance, and support your growth journey.
+            </p>
+
+            <h4 class="font-poppins text-xl font-semibold text-slate-700 mb-4">Our Business Services Cover:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-slate-600 text-sm mb-6">
+                <div class="flex items-center p-2 bg-emerald-50 rounded-md"><i class="fas fa-check text-emerald-500 mr-3 w-4"></i> Bookkeeping & Management Accounts</div>
+                <div class="flex items-center p-2 bg-emerald-50 rounded-md"><i class="fas fa-check text-emerald-500 mr-3 w-4"></i> VAT Registration, Returns & Advice</div>
+                <div class="flex items-center p-2 bg-emerald-50 rounded-md"><i class="fas fa-check text-emerald-500 mr-3 w-4"></i> Payroll Services & Auto-Enrolment Pensions</div>
+                <div class="flex items-center p-2 bg-emerald-50 rounded-md"><i class="fas fa-check text-emerald-500 mr-3 w-4"></i> Corporation Tax Returns & Planning</div>
+                <div class="flex items-center p-2 bg-emerald-50 rounded-md"><i class="fas fa-check text-emerald-500 mr-3 w-4"></i> Statutory Accounts Preparation & Filing</div>
+                <div class="flex items-center p-2 bg-emerald-50 rounded-md"><i class="fas fa-check text-emerald-500 mr-3 w-4"></i> Cash Flow Planning & Forecasting</div>
+                <div class="flex items-center p-2 bg-emerald-50 rounded-md"><i class="fas fa-check text-emerald-500 mr-3 w-4"></i> Business Setup & Structure Advice (Sole Trader, Ltd Co.)</div>
+                <div class="flex items-center p-2 bg-emerald-50 rounded-md"><i class="fas fa-check text-emerald-500 mr-3 w-4"></i> Company Secretarial Services</div>
+                <div class="flex items-center p-2 bg-emerald-50 rounded-md"><i class="fas fa-check text-emerald-500 mr-3 w-4"></i> Business Growth Advisory</div>
+                <div class="flex items-center p-2 bg-emerald-50 rounded-md"><i class="fas fa-check text-emerald-500 mr-3 w-4"></i> Software Advice & Implementation (e.g., Xero, QuickBooks)</div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-emerald-100 to-teal-100 p-4 rounded-lg mb-6 shadow">
+                <h5 class="font-poppins text-md font-semibold text-teal-800 mb-2 flex items-center"><i class="fas fa-star text-yellow-500 mr-2"></i> Our Best Experience:</h5>
+                <p class="text-sm text-teal-700 leading-relaxed">"We’ve supported dozens of local Blackburn businesses from their initial launch to sustained profitability, helping them navigate regulatory hurdles, stay compliant, and achieve robust financial health with clarity, precision, and strategic insight."</p>
+            </div>
+
+            <div class="text-center mt-8">
+                 <a href="contact.html?subject=BusinessAccountancyInquiry" class="inline-flex items-center justify-center font-poppins text-base font-semibold text-white bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-600 hover:opacity-90 transition-opacity duration-300 px-10 py-3.5 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                    Strengthen Your Business Finances <i class="fas fa-rocket ml-2"></i>
+                </a>
+                <p class="text-xs text-slate-500 mt-3">Partner with us for sustainable growth.</p>
+            </div>
+            <div class="mt-5 border-t border-slate-200 pt-3">
+                <p class="text-xs text-slate-400 text-center">AccounTaxation: Strategy. Compliance. Success.</p>
+            </div>
+        </div>
+    </div>
+     <!-- CTA Section 3: Quick Tax Query -->
+    <section id="cta-quick-tax-query" class="py-16 md:py-20 bg-gradient-to-tl from-red-50 via-slate-50 to-pink-50 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-20" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg width=%22100%22 height=%22100%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cdefs%3E%3Cpattern id=%22ptn%22 patternUnits=%22userSpaceOnUse%22 width=%2220%22 height=%2220%22%3E%3Cpath d=%22M0 10 h20 M10 0 v20%22 stroke=%22%23ef4444%22 stroke-width=%220.5%22/%3E%3C/pattern%3E%3C/defs%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22url(%23ptn)%22/%3E%3C/svg%3E'); background-size: 40px 40px;"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="mb-6" data-aos="zoom-out">
+                     <span class="inline-block p-4 bg-white rounded-full shadow-lg ring-4 ring-red-200">
+                        <i class="fas fa-bolt text-4xl text-red-500"></i>
+                    </span>
+                </div>
+                <h2 class="font-poppins text-3xl md:text-4xl font-extrabold text-slate-900 mb-4" data-aos="fade-up">
+                    Got a <span class="sparkle-text">Quick Tax Question?</span>
+                </h2>
+                <p class="text-slate-600 mb-8 text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                    Sometimes you just need a fast answer to a simple tax query. Use our Quick Assist form, and one of our experts will aim to provide a brief response via email.
+                </p>
+            </div>
+
+            <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-2xl glassmorphism border border-red-100" data-aos="fade-up" data-aos-delay="200">
+                <form action="#" method="POST" class="space-y-5" x-data="{ question: '', charCount: 0 }" x-on:submit.prevent="console.log('Quick Query Submitted:', question)">
+                    <div>
+                        <label for="quick-email" class="sr-only">Your Email</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <input type="email" name="quick-email" id="quick-email" required class="block w-full pl-10 pr-3 py-3 border border-slate-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 placeholder-slate-400 transition text-sm" placeholder="Your Email Address">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="quick-question" class="sr-only">Your Question</label>
+                        <div class="relative">
+                            <textarea x-model="question" @input="charCount = question.length" name="quick-question" id="quick-question" rows="3" required maxlength="300" class="block w-full px-4 py-3 border border-slate-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 placeholder-slate-400 transition text-sm resize-none" placeholder="Type your tax question here (max 300 chars)..."></textarea>
+                            <!-- Interactive Element: Character Counter -->
+                            <div class="absolute bottom-2 right-3 text-xs text-slate-400" x-text="charCount + '/300'"></div>
+                        </div>
+                    </div>
+                     <div class="pt-2">
+                        <button type="submit" class="w-full flex items-center justify-center font-poppins font-semibold text-red-600 bg-red-100 hover:bg-red-200 border border-red-300 transition-colors duration-300 px-6 py-3 rounded-md shadow-md text-base">
+                            Ask Quick Question <i class="fas fa-question-circle ml-2"></i>
+                        </button>
+                    </div>
+                </form>
+                <p class="text-xs text-slate-500 mt-5 text-center italic">
+                    For simple queries only. Complex issues may require a full consultation. Response within 1-2 business days.
+                </p>
+            </div>
+             <div class="mt-10 text-center" data-aos="fade-up" data-aos-delay="300">
+                <p class="text-sm text-slate-600">For more in-depth support:
+                    <a href="#contact-form" class="font-semibold text-red-600 hover:underline">Use Our Main Contact Form</a> or <a href="tel:01254405737" class="font-semibold text-red-600 hover:underline">Call Us</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+        <!-- Interactive Services Showcase Section -->
+    <section id="interactive-services-showcase" class="py-20 md:py-28 bg-gradient-to-b from-slate-100 via-white to-slate-100 relative overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-red-500/5 rounded-full filter blur-3xl animate-pulse opacity-50"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-pink-500/5 rounded-full filter blur-3xl animate-pulse animation-delay-2000 opacity-50"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 md:mb-20" data-aos="fade-up">
+                <span class="font-poppins text-sm font-semibold text-red-600 uppercase tracking-wider">Explore Our Expertise</span>
+                <h2 class="font-poppins text-4xl md:text-5xl font-extrabold text-slate-900 mt-3 mb-5 leading-tight">
+                    Tailored Financial Solutions, <span class="sparkle-text">Interactively Displayed</span>
+                </h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    Discover how AccounTaxation can empower your financial journey. Click on a service category below to explore detailed offerings and see how we cater to your specific needs in Blackburn.
+                </p>
+                <div class="mt-8 flex justify-center">
+                    <div class="w-24 h-1.5 bg-gradient-to-r from-red-500 to-pink-600 rounded-full"></div>
+                </div>
+            </div>
+
+            <div x-data="{ selectedService: null }" class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-8 items-start">
+
+                <!-- Service Pillar 1: Welfare & Financial Hardship -->
+                <div @click="selectedService = selectedService === 'welfare' ? null : 'welfare'"
+                     :class="{ 'lg:scale-110 z-20 shadow-2xl': selectedService === 'welfare', 'lg:opacity-70 lg:scale-95 hover:lg:opacity-100 hover:lg:scale-100': selectedService && selectedService !== 'welfare' }"
+                     class="cursor-pointer transition-all duration-500 ease-out bg-white rounded-xl soft-shadow-card-darker overflow-hidden relative group border-4 border-transparent hover:border-red-300"
+                     data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6 md:p-8 text-center relative">
+                        <div class="absolute -top-3 -right-3 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 opacity-70 group-hover:opacity-100">
+                             <i class="fas fa-plus text-red-500 text-lg" :class="{ 'fa-minus': selectedService === 'welfare', 'fa-plus': selectedService !== 'welfare' }"></i>
+                        </div>
+                        <div class="mb-5 inline-block p-5 bg-gradient-to-br from-red-500 to-pink-600 text-white rounded-full shadow-xl transform group-hover:rotate-6 transition-transform duration-300">
+                            <i class="fas fa-hands-helping text-4xl"></i>
+                        </div>
+                        <h3 class="font-poppins text-2xl font-bold text-slate-800 mb-2">Welfare & Hardship</h3>
+                        <p class="text-sm text-red-700 font-semibold mb-4">Compassionate Support System</p>
+                        <p class="text-slate-600 text-sm leading-relaxed" x-show="selectedService !== 'welfare'">
+                            Navigating benefits and financial difficulties? We provide expert guidance and a helping hand.
+                        </p>
+                    </div>
+                    <div x-show="selectedService === 'welfare'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4"
+                         class="bg-gradient-to-b from-red-50 to-pink-50 p-6 md:p-8 border-t-2 border-red-200">
+                        <h4 class="font-poppins text-lg font-semibold text-slate-700 mb-4">Key Support Areas:</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-600 mb-6">
+                            <li class="flex items-start"><i class="fas fa-shield-alt text-red-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Benefit Claims:</strong> Universal Credit, PIP, ESA, JSA.</span></li>
+                            <li class="flex items-start"><i class="fas fa-balance-scale-left text-red-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Appeals & Decisions:</strong> Challenging unfair outcomes.</span></li>
+                            <li class="flex items-start"><i class="fas fa-file-invoice-dollar text-red-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Debt Advice:</strong> Liaison and support with managing debts.</span></li>
+                            <li class="flex items-start"><i class="fas fa-home text-red-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Housing & Council:</strong> Housing Benefits, Council Tax Support.</span></li>
+                        </ul>
+                        <a href="services.html#welfare" class="w-full inline-flex items-center justify-center font-poppins text-base font-semibold text-white bg-red-600 hover:bg-red-700 transition-colors duration-300 px-6 py-3 rounded-lg shadow-md hover:shadow-lg">
+                            More on Welfare Support <i class="fas fa-arrow-circle-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Pillar 2: Personal Accountancy -->
+                <div @click="selectedService = selectedService === 'personal' ? null : 'personal'"
+                     :class="{ 'lg:scale-110 z-20 shadow-2xl': selectedService === 'personal', 'lg:opacity-70 lg:scale-95 hover:lg:opacity-100 hover:lg:scale-100': selectedService && selectedService !== 'personal' }"
+                     class="cursor-pointer transition-all duration-500 ease-out bg-white rounded-xl soft-shadow-card-darker overflow-hidden relative group border-4 border-transparent hover:border-sky-300"
+                     data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6 md:p-8 text-center relative">
+                         <div class="absolute -top-3 -right-3 w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 opacity-70 group-hover:opacity-100">
+                             <i class="fas text-sky-500 text-lg" :class="{ 'fa-minus': selectedService === 'personal', 'fa-plus': selectedService !== 'personal' }"></i>
+                        </div>
+                        <div class="mb-5 inline-block p-5 bg-gradient-to-br from-sky-500 to-indigo-600 text-white rounded-full shadow-xl transform group-hover:rotate-6 transition-transform duration-300">
+                            <i class="fas fa-user-tie text-4xl"></i>
+                        </div>
+                        <h3 class="font-poppins text-2xl font-bold text-slate-800 mb-2">Personal Accountancy</h3>
+                        <p class="text-sm text-indigo-700 font-semibold mb-4">Individual Tax & Finance Experts</p>
+                        <p class="text-slate-600 text-sm leading-relaxed" x-show="selectedService !== 'personal'">
+                            Expert tax returns, capital gains, and inheritance planning for individuals and sole traders.
+                        </p>
+                    </div>
+                     <div x-show="selectedService === 'personal'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4"
+                         class="bg-gradient-to-b from-sky-50 to-indigo-50 p-6 md:p-8 border-t-2 border-sky-200">
+                        <h4 class="font-poppins text-lg font-semibold text-slate-700 mb-4">Key Personal Services:</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-600 mb-6">
+                            <li class="flex items-start"><i class="fas fa-file-signature text-sky-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Self-Assessment:</strong> Accurate & timely tax returns.</span></li>
+                            <li class="flex items-start"><i class="fas fa-chart-area text-sky-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Capital Gains Tax:</strong> Advice and calculations for CGT.</span></li>
+                            <li class="flex items-start"><i class="fas fa-house-user text-sky-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Landlord Income:</strong> Specialized support for property income.</span></li>
+                            <li class="flex items-start"><i class="fas fa-gift text-sky-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Inheritance Tax:</strong> Introductory planning and guidance.</span></li>
+                        </ul>
+                        <a href="services.html#personal-accountancy" class="w-full inline-flex items-center justify-center font-poppins text-base font-semibold text-white bg-sky-600 hover:bg-sky-700 transition-colors duration-300 px-6 py-3 rounded-lg shadow-md hover:shadow-lg">
+                            Explore Personal Tax Solutions <i class="fas fa-arrow-circle-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Pillar 3: Business Accountancy -->
+                <div @click="selectedService = selectedService === 'business' ? null : 'business'"
+                     :class="{ 'lg:scale-110 z-20 shadow-2xl': selectedService === 'business', 'lg:opacity-70 lg:scale-95 hover:lg:opacity-100 hover:lg:scale-100': selectedService && selectedService !== 'business' }"
+                     class="cursor-pointer transition-all duration-500 ease-out bg-white rounded-xl soft-shadow-card-darker overflow-hidden relative group border-4 border-transparent hover:border-emerald-300"
+                     data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-6 md:p-8 text-center relative">
+                        <div class="absolute -top-3 -right-3 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 opacity-70 group-hover:opacity-100">
+                             <i class="fas text-emerald-500 text-lg" :class="{ 'fa-minus': selectedService === 'business', 'fa-plus': selectedService !== 'business' }"></i>
+                        </div>
+                        <div class="mb-5 inline-block p-5 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-full shadow-xl transform group-hover:rotate-6 transition-transform duration-300">
+                            <i class="fas fa-briefcase text-4xl"></i>
+                        </div>
+                        <h3 class="font-poppins text-2xl font-bold text-slate-800 mb-2">Business Accountancy</h3>
+                        <p class="text-sm text-teal-700 font-semibold mb-4">SME & Startup Specialists</p>
+                        <p class="text-slate-600 text-sm leading-relaxed" x-show="selectedService !== 'business'">
+                            Comprehensive support for businesses: bookkeeping, VAT, payroll, corporation tax, and advisory.
+                        </p>
+                    </div>
+                    <div x-show="selectedService === 'business'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4"
+                         class="bg-gradient-to-b from-emerald-50 to-teal-50 p-6 md:p-8 border-t-2 border-emerald-200">
+                        <h4 class="font-poppins text-lg font-semibold text-slate-700 mb-4">Key Business Services:</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-600 mb-6">
+                            <li class="flex items-start"><i class="fas fa-book-open text-emerald-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Bookkeeping & VAT:</strong> Meticulous record-keeping and VAT returns.</span></li>
+                            <li class="flex items-start"><i class="fas fa-users-cog text-emerald-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Payroll & Auto-Enrolment:</strong> Efficient payroll management.</span></li>
+                            <li class="flex items-start"><i class="fas fa-landmark text-emerald-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Corporation Tax:</strong> Compliance and strategic tax planning.</span></li>
+                            <li class="flex items-start"><i class="fas fa-lightbulb text-emerald-500 mr-2.5 mt-1 flex-shrink-0"></i><span><strong>Business Setup & Advisory:</strong> Guidance for startups and growth.</span></li>
+                        </ul>
+                        <a href="services.html#business-accountancy" class="w-full inline-flex items-center justify-center font-poppins text-base font-semibold text-white bg-emerald-600 hover:bg-emerald-700 transition-colors duration-300 px-6 py-3 rounded-lg shadow-md hover:shadow-lg">
+                            Boost Your Business <i class="fas fa-arrow-circle-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- General CTA / Fallback for when no service is selected or to reset -->
+            <div class="mt-16 md:mt-20 text-center" data-aos="fade-up" data-aos-delay="400">
+                <div x-show="selectedService" x-transition class="mb-6">
+                    <button @click="selectedService = null" class="font-poppins text-sm font-semibold text-slate-600 hover:text-red-600 transition-colors duration-300 group">
+                        <i class="fas fa-times-circle mr-1.5 opacity-70"></i> Show All Service Categories
+                    </button>
+                </div>
+                <p class="text-lg text-slate-700 mb-6 max-w-xl mx-auto" :class="{ 'opacity-50': selectedService }">
+                    Unsure where to start or need a combination of services? We offer personalized consultations to map out the best financial strategy for you.
+                </p>
+                <a href="contact.html#contact-form" 
+                   class="inline-flex items-center justify-center font-poppins text-lg font-semibold text-white sparkle-bg hover:opacity-90 transition-all duration-300 px-10 py-4 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105"
+                   :class="{ 'ring-4 ring-offset-2 ring-red-300': !selectedService }">
+                    Request a Full Consultation <i class="fas fa-comments-dollar ml-3"></i>
+                </a>
+            </div>
+
+             <!-- "Developer Touch": Interactive SVG pattern animation idea (conceptual CSS) -->
+            <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+                <svg width="100%" height="100%" class="opacity-5">
+                    <defs>
+                        <pattern id="serviceDots" patternUnits="userSpaceOnUse" width="50" height="50">
+                            <circle cx="5" cy="5" r="1" class="fill-red-300 animate-pulse animation-delay-100" />
+                            <circle cx="25" cy="25" r="1.5" class="fill-pink-300 animate-pulse animation-delay-300" />
+                            <circle cx="45" cy="45" r="1" class="fill-orange-300 animate-pulse animation-delay-500" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#serviceDots)" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ensure Alpine.js is loaded if not already (as used in previous example) -->
+    <!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+
+    <style>
+        /* For the animated dots in the SVG background, if you want more dynamic pulsing */
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 0.4; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        .animate-pulse-dot {
+            animation: pulse-dot 2s infinite ease-in-out;
+        }
+        /* Assign different animation delays to circles if desired for variety */
+        .animate-pulse-dot.delay-1 { animation-delay: 0.3s; }
+        .animate-pulse-dot.delay-2 { animation-delay: 0.6s; }
+    </style>
+    <!-- Spacer divs for line count and layout -->
+    <div class="py-8 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="h-px bg-gradient-to-r from-transparent via-red-300 to-transparent w-full"></div>
+        </div>
+    </div>
+     <div class="py-6 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="inline-block w-12 h-12 bg-red-100 rounded-full animate-pulse mx-1"></div>
+            <div class="inline-block w-12 h-12 bg-pink-100 rounded-full animate-pulse mx-1 animation-delay-300"></div>
+            <div class="inline-block w-12 h-12 bg-orange-100 rounded-full animate-pulse mx-1 animation-delay-600"></div>
+        </div>
+    </div>
+     <div class="py-5 bg-slate-50"></div>
+     <div class="py-5 bg-white"></div>
+     <div class="py-4 bg-slate-50"></div>
+     <div class="py-4 bg-white"></div>
+     <div class="py-3 bg-slate-50"></div>
+     <div class="py-3 bg-white"></div>
+     <div class="py-2 bg-slate-50"></div>
+     <div class="py-2 bg-white"></div>
+     <div class="py-1 bg-slate-50"></div>
+     <div class="py-1 bg-white"></div>
+
+
+    <script>
+        function openPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            if (popup) {
+                popup.classList.add('active');
+                // Optional: Disable body scroll
+                // document.body.style.overflow = 'hidden';
+                 AOS.refreshHard(); // Refresh AOS for elements inside popup if needed
+            }
+        }
+
+        function closePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            if (popup) {
+                popup.classList.remove('active');
+                // Optional: Enable body scroll
+                // document.body.style.overflow = '';
+            }
+        }
+
+        // Close popup when clicking outside the content area
+        document.querySelectorAll('.popup-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(event) {
+                if (event.target === overlay) { // Check if click is on overlay itself, not children
+                    closePopup(overlay.id);
+                }
+            });
+        });
+        
+        // Close popups with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.popup-overlay.active').forEach(popup => {
+                    closePopup(popup.id);
+                });
+            }
+        });
+    </script>
+
+</main>
+
+
+
+  <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-pink-500 to-orange-500"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- About AccounTaxation -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="flex items-center group">
+                        <svg class="h-8 w-8 text-red-500 group-hover:text-red-400 transition-colors duration-300 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                        </svg>
+                        <span class="font-poppins font-bold text-xl text-white group-hover:text-red-400 transition-colors duration-300">AccounTaxation</span>
+                    </a>
+                    <p class="text-sm leading-relaxed">
+                        Guiding individuals out of financial struggle and businesses into financial strength. Your trusted local partner in Blackburn.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="#" aria-label="Facebook" class="text-slate-400 hover:text-red-500 transition-colors duration-300"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" aria-label="Twitter" class="text-slate-400 hover:text-red-500 transition-colors duration-300"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="text-slate-400 hover:text-red-500 transition-colors duration-300"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="font-poppins text-lg font-semibold text-white mb-5">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Home</a></li>
+                        <li><a href="about.html" class="hover:text-red-400 transition-colors duration-300 text-sm">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Our Services</a></li>
+                        <li><a href="reviews.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Client Reviews</a></li>
+                        <li><a href="contact.html" class="hover:text-red-400 transition-colors duration-300 text-sm">Contact & Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="font-poppins text-lg font-semibold text-white mb-5">Core Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html#welfare" class="hover:text-red-400 transition-colors duration-300 text-sm">Welfare & Hardship Support</a></li>
+                        <li><a href="services.html#personal-accountancy" class="hover:text-red-400 transition-colors duration-300 text-sm">Personal Accountancy</a></li>
+                        <li><a href="services.html#business-accountancy" class="hover:text-red-400 transition-colors duration-300 text-sm">Business Advisory</a></li>
+                        <li><a href="contact.html#contact-form" class="hover:text-red-400 transition-colors duration-300 text-sm">Tax Return Filing</a></li>
+                        <li><a href="contact.html#contact-form" class="hover:text-red-400 transition-colors duration-300 text-sm">Benefit Claims Assistance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="font-poppins text-lg font-semibold text-white mb-5">Get In Touch</h4>
+                    <address class="not-italic space-y-3 text-sm">
+                        <p class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-red-500 flex-shrink-0"></i>
+                            <span>14 B JOHNSTON STREET<br>BLACKBURN, BB2 1ES</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-red-500"></i>
+                            <a href="tel:01254405737" class="hover:text-red-400 transition-colors duration-300">01254 405737</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-mobile-alt mr-3 text-red-500"></i>
+                            <a href="tel:07813133215" class="hover:text-red-400 transition-colors duration-300">07813 133215</a>
+                        </p>
+                         <p class="flex items-center">
+                            <i class="fas fa-mobile-alt mr-3 text-red-500"></i>
+                            <a href="tel:07867966636" class="hover:text-red-400 transition-colors duration-300">07867 966636</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-red-500"></i>
+                            <a href="mailto:info@accountaxation.co.uk" class="hover:text-red-400 transition-colors duration-300">info@accountaxation.co.uk</a> (Placeholder)
+                        </p>
+                    </address>
+                    <div class="mt-6">
+                        <a href="contact.html" class="inline-flex items-center font-poppins text-sm font-semibold text-white bg-red-600 hover:bg-red-700 transition-colors duration-300 px-6 py-2.5 rounded-md shadow hover:shadow-lg">
+                            Send Us A Message <i class="fas fa-paper-plane ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-700 pt-8 mt-8 text-center text-sm">
+                <p>© <span id="currentYear"></span> AccounTaxation Accountancy Services. All Rights Reserved.</p>
+                <p class="mt-1">Designed with <i class="fas fa-heart text-red-500"></i> for the Blackburn Community.</p>
+                 <p class="mt-2 text-xs text-slate-500">
+                    This website is for informational purposes only and does not constitute financial advice.
+                </p>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-12 h-12 md:w-20 md:h-20 opacity-10">
+             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#EF4444" d="M48.1,-61.1C62.3,-52.7,73.8,-39.5,78.2,-24.1C82.7,-8.7,79.9,8.8,72.7,23.7C65.5,38.6,53.8,50.9,40.4,59.4C27,67.9,13.5,72.6,-0.5,73.1C-14.5,73.6,-29.1,69.9,-42.3,62C-55.6,54.2,-67.7,42.2,-73.3,27.9C-78.9,13.6,-78.1,-3,-72.4,-17.7C-66.7,-32.3,-56.1,-45,-43.2,-54.2C-30.3,-63.3,-15.2,-68.9,0.8,-70.1C16.7,-71.3,33. equilíbrio,-69.6,48.1,-61.1Z" transform="translate(100 100) scale(0.8)" /></svg>
+        </div>
+         <div class="absolute top-10 right-0 w-12 h-12 md:w-20 md:h-20 opacity-10">
+             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#EC4899" d="M48.1,-61.1C62.3,-52.7,73.8,-39.5,78.2,-24.1C82.7,-8.7,79.9,8.8,72.7,23.7C65.5,38.6,53.8,50.9,40.4,59.4C27,67.9,13.5,72.6,-0.5,73.1C-14.5,73.6,-29.1,69.9,-42.3,62C-55.6,54.2,-67.7,42.2,-73.3,27.9C-78.9,13.6,-78.1,-3,-72.4,-17.7C-66.7,-32.3,-56.1,-45,-43.2,-54.2C-30.3,-63.3,-15.2,-68.9,0.8,-70.1C16.7,-71.3,33. equilíbrio,-69.6,48.1,-61.1Z" transform="translate(100 100) rotate(45) scale(0.7)" /></svg>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button (Optional, but good UX) -->
+    <button id="backToTopBtn" title="Go to top" class="fixed bottom-6 right-6 w-12 h-12 sparkle-bg text-white rounded-full shadow-lg hover:opacity-80 transition-opacity duration-300 z-50 hidden items-center justify-center text-xl">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // values from 0 to 3000, with step 50ms
+            once: true, // whether animation should happen only once - while scrolling down
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Open mobile menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                mobileMenuButton.setAttribute('aria-label', 'Close mobile menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        // Dynamic year for footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Sticky Header background change on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white/95', 'shadow-lg');
+                header.classList.remove('bg-white/80');
+            } else {
+                header.classList.remove('bg-white/95', 'shadow-lg');
+                header.classList.add('bg-white/80');
+
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.classList.remove('hidden');
+                backToTopBtn.classList.add('flex');
+            } else {
+                backToTopBtn.classList.add('hidden');
+                backToTopBtn.classList.remove('flex');
+            }
+        };
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+    </script>
+</body>
+</html>
