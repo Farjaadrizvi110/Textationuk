@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify Preloader Test</title>
+</head>
+<body>
+    <h1>Netlify Preloader Test Page</h1>
+    <p>This page is used to test if the preloader works correctly on Netlify.</p>
+    <p>If you see this page directly without the preloader, there's an issue with the Netlify configuration.</p>
+    
+    <h2>Navigation Test</h2>
+    <ul>
+        <li><a href="/">Home (should show preloader)</a></li>
+        <li><a href="/index.html">Index (should show preloader)</a></li>
+        <li><a href="/about-us.html">About Us (should show preloader)</a></li>
+        <li><a href="/services.html">Services (should show preloader)</a></li>
+    </ul>
+    
+    <h2>Direct Access Test</h2>
+    <ul>
+        <li><a href="/index.html?from_preloader=true">Index (bypass preloader)</a></li>
+        <li><a href="/preloader.html?page=index.html">Preloader directly</a></li>
+    </ul>
+    
+    <script>
+        console.log('Test page loaded');
+        console.log('Current URL:', window.location.href);
+        console.log('URL parameters:', new URLSearchParams(window.location.search));
+    </script>
+</body>
+</html>

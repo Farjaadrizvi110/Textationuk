@@ -1,0 +1,24 @@
+# Netlify redirects file - Preloader Configuration
+
+# Allow direct access to preloader.html (prevent redirect loop)
+/preloader.html    /preloader.html    200
+
+# Redirect all page requests to preloader (main functionality)
+/    /preloader.html?page=index.html    200
+/index.html    /preloader.html?page=index.html    200
+/about-us.html    /preloader.html?page=about-us.html    200
+/services.html    /preloader.html?page=services.html    200
+/contact.html    /preloader.html?page=contact.html    200
+/Growth.html    /preloader.html?page=Growth.html    200
+/why-choose-us.html    /preloader.html?page=why-choose-us.html    200
+/test-preloader.html    /preloader.html?page=test-preloader.html    200
+/deployment-test.html    /preloader.html?page=deployment-test.html    200
+
+# Force HTTPS
+http://techtalksolution.netlify.app/*    https://techtalksolution.netlify.app/:splat    301!
+http://www.techtalksolution.netlify.app/*    https://techtalksolution.netlify.app/:splat    301!
+
+# Handle common file extensions
+*.php    /index.html    404
+*.asp    /index.html    404
+*.aspx   /index.html    404
